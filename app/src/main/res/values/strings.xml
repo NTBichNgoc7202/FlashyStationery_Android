@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Flashy Stationery</string>
+    <string name="onboarding_1">Chào mừng bạn đến với \n
+        <b>Flashy</b> - Thế giới văn phòng phẩm</string>
+    <string name="onboarding_2">Đa dạng sản phẩm \n \n
+              Mua sắm tiện lợi \n \n Nhiều tiện ích hấp dẫn</string>
+    <string name="onboarding_3"><b>Bắt đầu</b> và lựa chọn \n
+        sản phẩm yêu thích của bạn</string>
+    <string name="onboarding_next">TIẾP &#187;</string>
+    <string name="onboarding_start">BẮT ĐẦU</string>
+</resources>
