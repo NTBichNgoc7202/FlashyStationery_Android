@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/chk_ItemSelect"
+        style="@style/CustomCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp" />
+
+    <ImageView
+        android:id="@+id/imv_ItemThumb"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/location_icon"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_ItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_ItemCategory"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/long_round_textbox"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:text="Phân loại:"
+            android:textColor="#66000000"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_ItemDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_border_1"
+                android:gravity="center"
+                android:text="SALE"
+                android:textColor="#5d5c78"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_ItemDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Kết thúc 31 thg 12 23:59:59"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+            <TextView
+                android:id="@+id/txt_ItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:text="48.000 đ"
+                android:background="@drawable/round_border_2"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginEnd="60dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#ffffff"/>
+            <Button
+                android:id="@+id/btn_Minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_minus_unavai"/>
+            <TextView
+                android:id="@+id/txt_ItemNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/btn_Plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background = "@drawable/ic_plus"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

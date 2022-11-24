@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <!-- border color -->
+            <stroke
+                android:width="5dp"
+                android:color="#FBD3CA" />
+
+            <!-- thickness of border (positive value will give shadow on that side) -->
+
+            <padding
+                android:bottom="5dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp" />
+
+        </shape>
+    </item>
+    <!-- background -->
+
+    <item>
+        <shape>
+            <solid android:color="#F7F8F4" />
+        </shape>
+    </item>
+</layer-list>
