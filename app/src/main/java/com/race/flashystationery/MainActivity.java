@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         preferences = getSharedPreferences("com.race.myAppName",MODE_PRIVATE);
+        //chạy thật xoá dòng dưới
         preferences.edit().putBoolean("firstrun", true).commit();
+
 
 
     }
