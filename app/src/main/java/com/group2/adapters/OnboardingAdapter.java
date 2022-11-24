@@ -1,4 +1,4 @@
-package com.race.adapters;
+package com.group2.adapters;
 
 
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.race.flashystationery.R;
+import com.group2.flashystationery.R;
 
 public class OnboardingAdapter extends PagerAdapter{
 

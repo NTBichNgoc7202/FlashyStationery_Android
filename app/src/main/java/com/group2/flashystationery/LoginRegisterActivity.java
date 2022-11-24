@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.group2.flashystationery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.race.flashystationery.databinding.ActivityLoginRegisterBinding;
+import com.group2.flashystationery.databinding.ActivityLoginRegisterBinding;
 
 public class LoginRegisterActivity extends AppCompatActivity {
 

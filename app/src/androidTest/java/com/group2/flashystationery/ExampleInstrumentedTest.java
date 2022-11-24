@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.group2.flashystationery;
 
 import android.content.Context;
 

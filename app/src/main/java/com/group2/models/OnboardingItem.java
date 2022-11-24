@@ -1,4 +1,4 @@
-package com.race.models;
+package com.group2.models;
 
 public class OnboardingItem {
     int onboardingImage;
