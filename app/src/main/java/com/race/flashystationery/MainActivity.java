@@ -1,4 +1,4 @@
-package com.group2.flashystationery;
+package com.race.flashystationery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.group2.flashystationery.databinding.ActivityMainBinding;
+import com.race.flashystationery.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

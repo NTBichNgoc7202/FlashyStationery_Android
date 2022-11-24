@@ -1,4 +1,4 @@
-package com.group2.flashystationery;
+package com.race.flashystationery;
 
 import org.junit.Test;
 

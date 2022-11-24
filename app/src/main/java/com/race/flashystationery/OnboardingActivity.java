@@ -1,4 +1,4 @@
-package com.group2.flashystationery;
+package com.race.flashystationery;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.group2.adapters.OnboardingAdapter;
-import com.group2.flashystationery.databinding.ActivityOnboardingBinding;
+import com.race.adapters.OnboardingAdapter;
+import com.race.flashystationery.databinding.ActivityOnboardingBinding;
 
 public class OnboardingActivity extends AppCompatActivity {
 
