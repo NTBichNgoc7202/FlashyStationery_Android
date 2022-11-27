@@ -1,9 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.race.flashystationery.UserProfileActivity">
+    tools:context="com.race.flashystationery.UserProfileActivity"
+    android:orientation="vertical"
+    android:background="#F7F8F4">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="@drawable/image_shadow_2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_UserAvatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_user"
+            android:padding="10dp"
+            android:background="@drawable/image_shadow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USER FULLNAME"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#5D5C78"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:background="#4DD3D3D3"
+            android:elevation="0dp"
+            android:layout_marginStart="15dp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:padding="10dp">
+        <TableRow>
+            <TextView
+                android:layout_span="5"
+                android:text="Theo dõi đơn hàng"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#5D5C78"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:id="@+id/ll_ChoXacNhan"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_shadow"
+                    android:src="@drawable/order_confirm"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chờ\nxác nhận"
+                    android:textColor="#D8BDC1"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ChoLayHang"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_shadow"
+                    android:src="@drawable/order_package"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chờ\nlấy hàng"
+                    android:textColor="#D8BDC1"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_DangGiao"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_shadow"
+                    android:src="@drawable/shipping"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đang giao"
+                    android:textColor="#D8BDC1"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_DanhGia"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_shadow"
+                    android:src="@drawable/evaluate"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đánh giá"
+                    android:textColor="#D8BDC1"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_HuyVaTraHang"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_shadow"
+                    android:src="@drawable/order_return"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đã hủy/\nTrả hàng"
+                    android:textColor="#D8BDC1"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/image_shadow_2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiện ích của tôi"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#5D5C78"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sản phẩm yêu thích"
+            android:drawableLeft="@drawable/favorite"
+            android:drawablePadding="2dp"
+            android:scaleType="fitXY"
+            />
+    </LinearLayout>
+</LinearLayout>
