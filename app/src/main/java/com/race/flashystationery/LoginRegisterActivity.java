@@ -1,5 +1,6 @@
 package com.race.flashystationery;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,6 +20,9 @@ public class LoginRegisterActivity extends AppCompatActivity {
 
         binding = ActivityLoginRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
