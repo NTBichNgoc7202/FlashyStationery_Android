@@ -19,232 +19,369 @@
                     android:layout_height="40dp"
                     android:orientation="horizontal"
                     android:gravity="bottom">
+                        <SearchView
+                            android:id="@+id/search_home"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_border_finding"
+                            android:queryHint="Bạn muốn tìm gì"/>
+
                         <ImageView
+                            android:id="@+id/imv_notification"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/notification_icon"
                             android:layout_gravity="end"/>
                 </LinearLayout>
 
-                <ScrollView
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
-
                                 <ImageView
+                                    android:id="@+id/imv_banner1"
                                     android:layout_width="978px"
                                     android:layout_height="250px"
                                     android:src="@drawable/banner1" />
 
                                 <ImageView
+                                    android:id="@+id/imv_banner2"
                                     android:layout_width="978px"
                                     android:layout_height="250px"
                                     android:layout_marginLeft="5dp"
                                     android:src="@drawable/banner2" />
 
                                 <ImageView
+                                    android:id="@+id/imv_banner3"
                                     android:layout_width="978px"
                                     android:layout_height="250px"
                                     android:layout_marginLeft="5dp"
                                     android:src="@drawable/banner3" />
                         </LinearLayout>
-                </ScrollView>
+                </HorizontalScrollView>
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
                         <TableRow>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_FlashSale"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/flashsale"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_FlashSale"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Flash Sale"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
 
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_TopSale"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/topsale"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_TopSale"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Top Sale"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_NewProduct"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/newproduct"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_NewProduct"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Sản phẩm mới"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_WarehouseDiscount"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/warehousediscount"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_WarehouseDiscount"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Tồn kho"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
                         </TableRow>
                         <TableRow>
                                 <TextView
-                                    android:text="Flash Sale"
-                                    android:textSize="15sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="DANH MỤC SẢN PHẨM"
+                                    android:textSize="25sp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:textColor="#5D5C78"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_span="4"/>
+                        </TableRow>
+                        <TableRow
+                            android:layout_marginTop="5dp">
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_NoteBook"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/notebookitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_NoteBook"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Sổ"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_Book"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/bookitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_Book"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Vở"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
+                                    android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imv_LearningTool"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:padding="5dp"
+                                            android:src="@drawable/pencil" />
+
+                                        <TextView
+                                            android:id="@+id/txt_LearningTool"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:text="Dụng cụ\nhọc tập"
+                                            android:textColor="#D8BDC1" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_Files"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/filesitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_Files"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Files"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_marginTop="5dp">
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_PencilCase"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/pencilcaseitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_PencilCase"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Hộp bút"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_LabelBook"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/labelitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_LabelBook"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Nhãn vở"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_WrappingPaper"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/wrappingpaperitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_WrappingPaper"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Giấy bao\ncác loại"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                        <ImageView
+                                            android:id="@+id/imv_DecorativeThing"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/image_shadow"
+                                            android:src="@drawable/othersitem"
+                                            android:padding="5dp"/>
+                                        <TextView
+                                            android:id="@+id/txt_DecrativeThing"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Đồ trang trí"
+                                            android:textColor="#D8BDC1"
+                                            android:gravity="center_horizontal"/>
+                                </LinearLayout>
+                        </TableRow>
+                        <TableRow>
                                 <TextView
-                                    android:text="Top Sale"
-                                    android:textSize="15sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="SẢN PHẨM BÁN CHẠY"
+                                    android:textSize="25sp"
                                     android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
+                                    android:gravity="start"
+                                    android:textColor="#5D5C78"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_span="4"/>
+                        </TableRow>
+                        <TableRow>
+                                <GridView
+                                    android:id="@+id/gv_HotProduct"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:numColumns="4"
+                                    android:layout_span="4"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="5dp"/>
+                        </TableRow>
+                        <TableRow>
                                 <TextView
-                                    android:text="Sản phẩm mới"
-                                    android:textSize="15sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="GỢI Ý SẢN PHẨM"
+                                    android:textSize="25sp"
                                     android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Xả kho"
-                                    android:textSize="15sp"
+                                    android:gravity="start"
+                                    android:textColor="#5D5C78"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_span="4"/>
+                        </TableRow>
+                        <TableRow>
+                                <GridView
+                                    android:id="@+id/gv_SuggestProduct"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="4"
                                     android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
+                                    android:numColumns="2"
+                                    android:layout_marginTop="5dp"/>
                         </TableRow>
                 </TableLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="DANH MỤC SẢN PHẨM"
-                    android:textSize="25sp"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:textColor="#5D5C78"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"/>
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    >
-                        <TableRow>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                        </TableRow>
-                        <TableRow>
-                                <TextView
-                                    android:text="Vở"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Sổ"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Dụng cụ học tập"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="File"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                        </TableRow>
-                        <TableRow>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                                <ImageView
-                                    android:src="@drawable/shadowpink_home"
-                                    android:layout_weight="1"/>
-                        </TableRow>
-                        <TableRow>
-                                <TextView
-                                    android:text="Hộp bút"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Nhãn vở"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Giấy bao các loại"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                                <TextView
-                                    android:text="Đồ trang trí"
-                                    android:textSize="15sp"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:textColor="#D8BDC1"
-                                    android:textStyle="bold"/>
-                        </TableRow>
-                </TableLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="SẢN PHẨM BÁN CHẠY"
-                    android:textSize="25sp"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:textColor="#5D5C78"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"/>
-               <GridView
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:numColumns="4"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="GỢI Ý SẢN PHẨM"
-                    android:textSize="25sp"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:textColor="#5D5C78"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"/>
-                <GridView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:numColumns="2"/>
-
-
-
-
-
-
         </LinearLayout>
 </ScrollView>
