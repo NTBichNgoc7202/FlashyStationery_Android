@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationActivity"
+    android:background="#F7F8F4"
+    android:padding="10dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TableRow>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:background="@drawable/image_shadow_3">
+                <ImageView
+                    android:id="@+id/imv_Message"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/messageicon"/>
+                <TextView
+                    android:id="@+id/txt_Message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tin nhắn"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:background="@drawable/image_shadow_3"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/imv_OrderList"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/orderlisticon"/>
+                <TextView
+                    android:id="@+id/txt_OrderList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Đơn hàng"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:background="@drawable/image_shadow_3"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/imv_Promotion"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/promotionicon"/>
+                <TextView
+                    android:id="@+id/txt_Promotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Khuyến mãi"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_span="2"
+                android:background="@drawable/image_shadow_3"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/imv_NotificationIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/notificationicon"/>
+                <TextView
+                    android:id="@+id/txt_NotificationIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Thông báo"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textAlignment="textStart"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:layout_marginTop="10dp">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật đơn hàng"
+                android:textColor="#5D5C78"
+                android:textSize="18sp"
+                android:textAlignment="textStart"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đọc tất cả (4)"
+                android:textColor="#D8BDC1"
+                android:textSize="18sp"
+                android:textAlignment="textEnd"/>
+        </TableRow>
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="#D8BDC1"
+            android:layout_marginTop="10dp">
+            <ListView
+                android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
