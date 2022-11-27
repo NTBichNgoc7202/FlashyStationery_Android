@@ -13,6 +13,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashyStationery"
         tools:targetApi="31">
+        
         <activity
         android:name="com.race.flashystationery.blog"
         android:exported="false">
@@ -20,7 +21,8 @@ xmlns:tools="http://schemas.android.com/tools">
             android:name="android.app.lib_name"
             android:value="" />
             
-    </activity>
+        </activity>
+        
         <activity
             android:name=".UserProfileActivity"
             android:exported="true"
@@ -35,6 +37,7 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".CartActivity"
             android:exported="true">
@@ -42,6 +45,7 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".LoginRegisterActivity"
             android:exported="false">
@@ -49,6 +53,7 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".OnboardingActivity"
             android:exported="true">
@@ -57,6 +62,7 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:value="" />
 
         </activity>
+        
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -65,6 +71,16 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
+        <activity
+        android:name="com.race.flashystationery.LoginActivity"
+        android:exported="false"
+
+        >
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+    </activity>
     </application>
 
 </manifest>
