@@ -90,6 +90,7 @@
         android:layout_marginLeft="5dp" />
 
     <Button
+        android:id="@+id/btn_QuenMatKhau"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Quên mật khẩu?"
@@ -103,7 +104,7 @@
 
   </LinearLayout>
   <Button
-
+      android:id="@+id/btn_Login"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="ĐĂNG NHẬP"
@@ -131,7 +132,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#5D5C78"
-        android:layout_marginLeft="5dp" />
+        android:layout_marginRight="5dp"/>
 
     <Button
         android:id="@+id/btn_Register"
@@ -144,10 +145,6 @@
         android:textStyle="bold"
         android:layout_gravity="end"
         android:layout_marginLeft="5dp"/>
-
-
   </LinearLayout>
 
-
-
-  </LinearLayout>
+</LinearLayout>
