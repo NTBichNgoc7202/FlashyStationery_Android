@@ -14,11 +14,10 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="ĐĂNG NHẬP"
-      android:textSize="22sp"
+      android:textSize="24sp"
       android:textStyle="bold"
       android:textColor="#5D5C78"
       android:gravity="center"
-      android:layout_marginTop="30dp"
       />
   <TextView
       android:id="@+id/txt_PhoneNumber"
@@ -29,13 +28,13 @@
       android:textStyle="bold"
       android:textColor="#5D5C78"
       android:gravity="left"
-      android:layout_marginTop="50dp"
+      android:layout_marginTop="20dp"
       />
   <EditText
       android:id="@+id/edt_PhoneNumber"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="5dp"
       android:background="@drawable/custom_input"
       android:ems="10"
       android:drawableStart="@drawable/ic_baseline_phone_24"
@@ -53,13 +52,13 @@
       android:textStyle="bold"
       android:textColor="#5D5C78"
       android:gravity="left"
-      android:layout_marginTop="30dp"
+      android:layout_marginTop="20dp"
       />
   <EditText
       android:id="@+id/edt_Password"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="5dp"
       android:background="@drawable/custom_input"
       android:ems="10"
       android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -71,7 +70,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="5dp"
      >
     <CheckBox
         android:id="@+id/chk_GhiNho"
@@ -84,23 +83,24 @@
         android:layout_height="wrap_content"
         android:text="Ghi nhớ cho lần sau"
         android:layout_gravity="center"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="#5D5C78"
-        android:layout_marginLeft="5dp" />
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
 
     <Button
         android:id="@+id/btn_QuenMatKhau"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quên mật khẩu?"
         android:textColor="#5D5C78"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:background="@drawable/round_button_1"
         android:textStyle="bold"
-        android:layout_gravity="end"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginLeft="30dp"
 
+      />
 
   </LinearLayout>
   <Button
@@ -109,7 +109,7 @@
       android:layout_height="wrap_content"
       android:text="ĐĂNG NHẬP"
       android:textColor="#5D5C78"
-      android:layout_marginTop="150dp"
+      android:layout_marginTop="180dp"
       android:textSize="22sp"
       android:textStyle="bold"
       android:background="@drawable/round_button_1"
@@ -129,22 +129,24 @@
         android:layout_height="wrap_content"
         android:text="Chưa có tài khoản?"
         android:layout_gravity="center"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="#5D5C78"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="30dp"/>
 
     <Button
         android:id="@+id/btn_Register"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="đăng ký ngay?"
         android:textColor="#5D5C78"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:background="@drawable/round_button_1"
         android:textStyle="bold"
         android:layout_gravity="end"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"/>
   </LinearLayout>
 
 </LinearLayout>
