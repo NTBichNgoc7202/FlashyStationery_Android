@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="mn_Home"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"
+        app:showAsAction="always"/>
+
+    <item android:id="mn_Print"
+        android:title="In ấn"
+        android:icon="@drawable/ic_printer"
+        android:enabled="true"
+        app:showAsAction="always"/>
+
+    <item android:id="mn_Post"
+        android:title="Bài viết"
+        android:icon="@drawable/ic_post"
+        app:showAsAction="always"/>
+
+    <item android:id="mn_Cart"
+        android:title="Giỏ hàng"
+        android:icon="@drawable/ic_cart"
+        android:enabled="true"
+        app:showAsAction="always"/>
+
+    <item android:id="mn_Account"
+        android:title="Tài khoản"
+        android:icon="@drawable/ic_account"
+        app:showAsAction="always"/>
+</menu>
