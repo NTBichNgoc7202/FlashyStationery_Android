@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.race.flashystationery.databinding.ActivityMainBinding;
@@ -32,9 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentNavigation();
 
-
-
-
+        binding.imvNoteBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,
+                        NoteBookActivity.class);
+                intent.putExtra("noteList", "itembotebook");
+                startActivity(intent);
+            }
+        });
 
 
     }
