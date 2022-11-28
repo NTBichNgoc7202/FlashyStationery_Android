@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import com.race.flashystationery.databinding.ActivityMainBinding;
 
@@ -23,7 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("com.race.myAppName",MODE_PRIVATE);
         //chạy thật xoá dòng dưới
-        preferences.edit().putBoolean("firstrun", true).commit();
+        //preferences.edit().putBoolean("firstrun", true).commit();
+
+
+        binding.imvNoteBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,
+                        NoteBookActivity.class);
+                intent.putExtra("noteList", "itembotebook");
+                startActivity(intent);
+            }
+        });
 
 
 

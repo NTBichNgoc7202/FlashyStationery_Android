@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8F4"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:background="@drawable/image_shadow"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/imv_ItemNoteBook"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:src="@drawable/planneritem"/>
+        <TextView
+            android:id="@+id/txt_ItemNameNoteBook"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Name NoteBook Item"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_ItemPriceNoteBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cart"
+                android:gravity="end"
+                android:layout_marginLeft="100dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
