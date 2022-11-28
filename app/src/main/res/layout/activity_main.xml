@@ -168,7 +168,8 @@
                                     android:textColor="#5D5C78"
                                     android:textStyle="bold"
                                     android:layout_marginTop="10dp"
-                                    android:layout_span="4"/>
+                                    android:layout_span="4"
+                                    android:layout_marginLeft="23dp"/>
                         </TableRow>
                         <TableRow
                             android:layout_marginTop="5dp">
@@ -347,7 +348,8 @@
                                     android:textColor="#5D5C78"
                                     android:textStyle="bold"
                                     android:layout_marginTop="10dp"
-                                    android:layout_span="4"/>
+                                    android:layout_span="4"
+                                    android:layout_marginLeft="23dp"/>
                         </TableRow>
                         <TableRow>
                                 <GridView
@@ -357,7 +359,8 @@
                                     android:numColumns="4"
                                     android:layout_span="4"
                                     android:layout_weight="1"
-                                    android:layout_marginTop="5dp"/>
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"/>
                         </TableRow>
                         <TableRow>
                                 <TextView
@@ -370,7 +373,8 @@
                                     android:textColor="#5D5C78"
                                     android:textStyle="bold"
                                     android:layout_marginTop="10dp"
-                                    android:layout_span="4"/>
+                                    android:layout_span="4"
+                                    android:layout_marginLeft="23dp"/>
                         </TableRow>
                         <TableRow>
                                 <GridView
@@ -380,7 +384,9 @@
                                     android:layout_span="4"
                                     android:layout_weight="1"
                                     android:numColumns="2"
-                                    android:layout_marginTop="5dp"/>
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="10dp"/>
                         </TableRow>
                 </TableLayout>
         </LinearLayout>
