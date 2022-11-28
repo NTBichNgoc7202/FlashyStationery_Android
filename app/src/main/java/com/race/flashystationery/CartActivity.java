@@ -11,7 +11,6 @@ import com.race.models.Item;
 import java.util.ArrayList;
 
 public class CartActivity extends AppCompatActivity {
-
     ActivityCartBinding binding;
     ArrayList<Item> items;
     ItemAdapter adapter;
