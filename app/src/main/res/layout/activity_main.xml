@@ -10,7 +10,7 @@
     android:background="#F7F8F4">
         
         <FrameLayout
-            android:id="@+id/fl_Home"
+            android:id="@+id/frameContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomnavigationView"
@@ -21,7 +21,7 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomnavigationView"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +30,10 @@
             android:background="@drawable/image_shadow_2"
             app:itemTextColor="#5D5C78"
             app:labelVisibilityMode="labeled"
-            />
+            app:itemBackground="@drawable/nav_icon_bg_color"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemPaddingTop="7dp"
+            app:itemPaddingBottom="7dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
