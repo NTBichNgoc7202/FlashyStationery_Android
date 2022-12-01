@@ -14,7 +14,6 @@ import com.race.flashystationery.databinding.ActivityUserProfileBinding;
 public class UserProfileActivity extends AppCompatActivity {
 
     ActivityUserProfileBinding binding;
-//    ActionBar actionBar = getSupportActionBar();
 
 
     @Override
