@@ -33,15 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentNavigation();
 
-        binding.imvNoteBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,
-                        NoteBookActivity.class);
-                intent.putExtra("noteList", "itembotebook");
-                startActivity(intent);
-            }
-        });
+//        binding.imvNoteBook.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,
+//                        NoteBookActivity.class);
+//                intent.putExtra("noteList", "itembotebook");
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
