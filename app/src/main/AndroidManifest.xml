@@ -15,7 +15,12 @@ xmlns:tools="http://schemas.android.com/tools">
         tools:targetApi="31">
         <activity
         android:name="com.race.flashystationery.blog"
-        android:exported="false">
+        android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />
@@ -25,11 +30,7 @@ xmlns:tools="http://schemas.android.com/tools">
             android:name=".UserProfileActivity"
             android:exported="true"
             android:label="Hồ sơ người dùng">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.app.lib_name"
