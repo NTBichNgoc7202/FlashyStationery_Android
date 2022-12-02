@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAddressActivity"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_add_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/edt_AddressName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_add_phone"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/edt_AddressPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_address"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/edt_Address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Thành phố(Tỉnh)/Quận(Huyện)/Phường(Xã)"
+            android:background="@drawable/edit_text_bg"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/edt_AddressDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Đường/Tòa nhà, số nhà..."
+            android:background="@drawable/edit_text_bg"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_type"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/radg_AddressType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rad_HomeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhà"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"/>
+            <RadioButton
+                android:id="@+id/rad_OfficeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Văn phòng"
+                android:layout_marginStart="70dp"
+                android:textSize="18sp"/>
+        </RadioGroup>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đặt làm địa chỉ mặc định"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            style="@style/CustomCheckbox"/>
+    </LinearLayout>
+
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btn_Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LƯU"
+            android:textSize="18sp"
+            android:background="@drawable/round_border_1"
+            android:layout_marginHorizontal="10dp"/>
+        <Button
+            android:id="@+id/btn_Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HỦY"
+            android:textSize="18sp"
+            android:background="@drawable/round_border_1"
+            android:layout_marginHorizontal="10dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
