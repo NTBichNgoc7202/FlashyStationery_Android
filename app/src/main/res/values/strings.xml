@@ -9,4 +9,14 @@
     <string name="onboarding_next">TIẾP &#187;</string>
     <string name="onboarding_start">BẮT ĐẦU</string>
     <string name="cart_header_title">Giỏ hàng của tôi</string>
+    <string name="user_acc_title">Hồ sơ người dùng</string>
+    
+    <string name="address_add_name">Tên người nhận <font color='#FF0000'>*</font></string>
+    <string name="address_add_phone">Số điện thoại <font color='#FF0000'>*</font></string>
+    <string name="address_address">Địa chỉ <font color='#FF0000'>*</font></string>
+    <string name="address_type">Loại địa chỉ <font color='#FF0000'>*</font></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
