@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/app_Bar_Search"
+        android:title="Search"
+        android:icon="@drawable/finding_icon"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item android:id="@+id/app_Bar_Notify"
+        android:title="Notification"
+        app:showAsAction="always"
+        android:icon="@drawable/notification" />
+
+</menu>
