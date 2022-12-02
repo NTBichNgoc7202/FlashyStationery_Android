@@ -23,13 +23,11 @@
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/long_round_textbox"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:breakStrategy="balanced"
             android:layout_marginHorizontal="10dp"
-            android:maxLength="22"
             android:drawableLeft="@drawable/location_icon"
-            android:text="Phường Linh Trung, Quận Thủ Đức"
-            android:textAllCaps="false"
+            android:text="Địa chỉ"
             android:textSize="15sp"
             android:paddingStart="5dp"/>
     </LinearLayout>
