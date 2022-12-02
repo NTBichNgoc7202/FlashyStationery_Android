@@ -1,5 +1,6 @@
 package com.race.flashystationery;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -41,6 +42,9 @@ public class OnboardingActivity extends AppCompatActivity {
 
         adapter = new OnboardingAdapter(OnboardingActivity.this);
         viewPager.setAdapter(adapter);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         addDots(0);
 
