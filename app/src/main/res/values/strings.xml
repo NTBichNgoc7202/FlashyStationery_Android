@@ -9,6 +9,11 @@
     <string name="onboarding_next">TIẾP &#187;</string>
     <string name="onboarding_start">BẮT ĐẦU</string>
     <string name="cart_header_title">Giỏ hàng của tôi</string>
+
+    <string name="product_description"><ul><li>Sổ Planner được thiết kế để lên và thực hiện kế hoạch bản thân hoàn hảo nhất cho kế hoạch 100 ngày;</li>\n</ul><ul><li>Kết cấu lò xo kép ánh ngọc với bìa được thiết kế hiện đại, bồi dày (1200g/m2) tạo sự sang trọng, luôn mới;</li></ul>\n<ul><li>Ruột sổ được in offset rõ ràng, sắc nét, bố cục hợp lý trên giấy chống lem với định lượng 120g/m2, chống lem nhòe hiệu quả.</li></ul>\n<ul><li>Định lượng: 120 g/m2</li></ul>\n<ul><li>Độ trắng: 76% ISO Số trang: 160 trang Kích thước: (148 x 210) mm</li></ul></string>
+    <string name="content_comment">Sổ xịn lắm luôn nha, giấy rất thơm. Bìa sổ với lò xo rất chắc chắn. Màu bìa quá trời xinh luôn. Giao hàng cũng nhanh, shop tư vấn nhiệt tình lắm. Sẽ quay lại mua lần hai.</string>\
+    <string name="reply_comment">Cảm ơn lời đánh giá của bạn rất nhiều. Đây chính xác là món quà vô giá đối với Flashy. Flashy sẽ không ngừng cải thiện chất lượng để mang lại cho mọi người những dịch vụ tốt nhất!</string>
+
     <string name="user_acc_title">Hồ sơ người dùng</string>
     
     <string name="address_add_name">Tên người nhận <font color='#FF0000'>*</font></string>
