@@ -11,57 +11,99 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashyStationery"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        
         <activity
-            android:name=".NoteBookActivity"
-            android:exported="true" >
+            android:name=".AddAddressActivity"
+            android:exported="false">
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
+        <activity
+            android:name=".AddressListActivity"
+            android:exported="false">
+            
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        
+        <activity
+            android:name=".NoteBookActivity"
+            android:exported="true">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        
         <activity
             android:name=".NotificationActivity"
             android:exported="false" >
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".blog"
             android:exported="false" >
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".UserProfileActivity"
             android:exported="true"
-            android:label="Hồ sơ người dùng" >
+            android:label="Hồ sơ người dùng">
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".CartActivity"
             android:exported="true" >
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".LoginRegisterActivity"
             android:exported="false" >
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".OnboardingActivity"
             android:exported="true" >
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+        android:name="com.race.flashystationery.ProductActivity"
+        android:exported="false">
+        
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        </activity>
+        
         <activity
             android:name=".MainActivity"
             android:exported="true" >
@@ -75,20 +117,23 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" >
+            android:exported="true">
+            
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
     </application>
-
 </manifest>
