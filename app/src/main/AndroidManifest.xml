@@ -110,3 +110,4 @@ xmlns:tools="http://schemas.android.com/tools">
                 android:value="" />
         </activity>
     </application>
+</manifest>
