@@ -10,8 +10,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.flashystationery.CartFragment;
-import com.race.flashystationery.CartFragment2;
+import com.race.fragment.CartFragment2;
 import com.race.flashystationery.R;
 import com.race.models.RebuyItem;
 

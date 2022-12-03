@@ -1,11 +1,10 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -15,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.race.adapters.ItemAdapter;
-import com.race.flashystationery.databinding.ActivityCartBinding;
+import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCartBinding;
 import com.race.models.Item;
 
