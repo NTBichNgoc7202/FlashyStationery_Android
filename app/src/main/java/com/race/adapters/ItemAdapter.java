@@ -11,18 +11,23 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentActivity;
+
+import com.race.flashystationery.CartActivity;
+import com.race.flashystationery.CartFragment;
 import com.race.flashystationery.R;
+import com.race.flashystationery.databinding.FragmentCartBinding;
 import com.race.models.Item;
 
 import java.util.List;
 
 public class ItemAdapter extends BaseAdapter {
-    Activity activity;
+    CartFragment fragment;
     int item_layout;
     List<Item> itemList;
 
-    public ItemAdapter(Activity activity, int item_layout, List<Item> itemList) {
-        this.activity = activity;
+    public ItemAdapter(CartFragment fragment, int item_layout, List<Item> itemList) {
+        this.fragment = fragment;
         this.item_layout = item_layout;
         this.itemList = itemList;
     }
@@ -48,7 +53,7 @@ public class ItemAdapter extends BaseAdapter {
         ViewHolder holder;
         if(view == null) {
             holder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) fragment.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(this.item_layout, null);
 
             holder.imvThumb = view.findViewById(R.id.imv_ItemThumb);
@@ -57,6 +62,11 @@ public class ItemAdapter extends BaseAdapter {
             holder.txtDiscount = view.findViewById(R.id.txt_ItemDiscount);
             holder.txtPrice = view.findViewById(R.id.txt_ItemPrice);
             holder.txtNumber = view.findViewById(R.id.txt_ItemNumber);
+            holder.btnPlus = view.findViewById(R.id.btn_Plus);
+            holder.btnMinus = view.findViewById(R.id.btn_Minus);
+            holder.chkSelect = view.findViewById(R.id.chk_Select);
+
+            view.setClickable(true);
 
             view.setTag(holder);
         }
@@ -71,13 +81,25 @@ public class ItemAdapter extends BaseAdapter {
         holder.txtDiscount.setText(item.getItemDiscount());
         holder.txtPrice.setText(item.getItemPrice());
         holder.txtNumber.setText(item.getItemNumber());
-
-
+        holder.btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.plusItem(item);
+            }
+        });
+        holder.btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.minusItem(item);
+            }
+        });
 
             return view;
     }
     public static class ViewHolder {
         ImageView imvThumb;
         TextView txtName, txtCategory, txtDiscount, txtPrice, txtNumber;
+        Button btnPlus, btnMinus;
+        CheckBox chkSelect;
     }
 }
