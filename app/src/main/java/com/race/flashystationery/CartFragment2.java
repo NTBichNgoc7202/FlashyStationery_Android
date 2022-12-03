@@ -48,7 +48,7 @@ public class CartFragment2 extends Fragment {
         txtCartRebuy = view.findViewById(R.id.txt_CartRebuy);
         addEvents();
         loadData();
-
+        loadView();
         return view;
     }
 

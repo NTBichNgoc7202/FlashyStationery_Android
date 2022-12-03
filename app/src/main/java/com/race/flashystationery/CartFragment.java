@@ -68,13 +68,6 @@ public class CartFragment extends Fragment {
                 replaceFragment(new CartFragment2());
             }
         });
-        txtCartRebuy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtCartFull.setBackgroundResource(R.drawable.header_activate);
-                txtCartRebuy.setBackgroundResource(R.drawable.header_disable);
-            }
-        });
     }
     private void loadData() {
         items = new ArrayList<>();
