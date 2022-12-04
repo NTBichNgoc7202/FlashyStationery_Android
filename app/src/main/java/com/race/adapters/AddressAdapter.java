@@ -64,19 +64,21 @@ public class AddressAdapter extends BaseAdapter {
         Address address = addressList.get(i);
 
         String subUserName;
-        subUserName = address.getUserName().substring(0,15) + "...";
+        if (address.getUserName().length() >= 15)
+            subUserName = address.getUserName().substring(0,15) + "...";
+        else
+            subUserName = address.getUserName();
 
         holder.txtName.setText(subUserName);
-        holder.txtPhone.setText("0" + address.getUserPhoneNumber());
+        holder.txtPhone.setText(address.getUserPhoneNumber());
         holder.txtDetail.setText(address.getAddressDetail());
         holder.txtAddress.setText(address.getAddress());
         holder.txtType.setText(address.getAddressType());
 
-        String defaultAddress = null;
-        if (address.getDefaultAddress() == 1)
-            defaultAddress = String.valueOf("ĐỊA CHỈ MẶC ĐỊNH");
-
-        holder.txtDefault.setText(defaultAddress);
+        if (address.getDefaultAddress().equals("x"))
+            holder.txtDefault.setVisibility(TextView.VISIBLE);
+        else
+            holder.txtDefault.setVisibility(TextView.INVISIBLE);
 
         holder.txtEdit.setOnClickListener(new View.OnClickListener() {
             @Override

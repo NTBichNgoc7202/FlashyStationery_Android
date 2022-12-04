@@ -1,17 +1,26 @@
 package com.race.models;
 
 public class Address {
-    String userName, userPhoneNumber, addressDetail, address, addressType;
-    int defaultAddress;
+    int addressId;
+    String userName, userPhoneNumber, address, addressDetail, addressType, defaultAddress;
 
-    public Address(String userName, String userPhoneNumber, String addressDetail, String address,
-                   String addressType, int defaultAddress) {
+    public Address(int addressId, String userName, String userPhoneNumber, String address,
+                   String addressDetail, String addressType, String defaultAddress) {
         this.userName = userName;
         this.userPhoneNumber = userPhoneNumber;
-        this.addressDetail = addressDetail;
         this.address = address;
+        this.addressDetail = addressDetail;
         this.addressType = addressType;
         this.defaultAddress = defaultAddress;
+        this.addressId = addressId;
+    }
+
+    public int getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
     public String getUserName() {
@@ -30,20 +39,20 @@ public class Address {
         this.userPhoneNumber = userPhoneNumber;
     }
 
-    public String getAddressDetail() {
-        return addressDetail;
-    }
-
-    public void setAddressDetail(String addressDetail) {
-        this.addressDetail = addressDetail;
-    }
-
     public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getAddressDetail() {
+        return addressDetail;
+    }
+
+    public void setAddressDetail(String addressDetail) {
+        this.addressDetail = addressDetail;
     }
 
     public String getAddressType() {
@@ -54,11 +63,12 @@ public class Address {
         this.addressType = addressType;
     }
 
-    public int getDefaultAddress() {
+    public String getDefaultAddress() {
         return defaultAddress;
     }
 
-    public void setDefaultAddress(int defaultAddress) {
+    public void setDefaultAddress(String defaultAddress) {
         this.defaultAddress = defaultAddress;
     }
+
 }

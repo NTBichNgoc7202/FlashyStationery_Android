@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 import com.race.flashystationery.databinding.ActivityAddAddressBinding;
+
+import java.sql.DatabaseMetaData;
 
 public class AddAddressActivity extends AppCompatActivity {
 
     ActivityAddAddressBinding binding;
+    AddressDatabaseHelper db = AddressListActivity.db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,42 @@ public class AddAddressActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Thêm địa chỉ mới");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        addEvents();
+    }
+
+    private void addEvents() {
+        binding.btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String addressType = "Nhà riêng";
+                if (binding.radHomeAddress.isChecked())
+                    addressType = "Nhà riêng";
+                else if (binding.radOfficeAddress.isChecked())
+                    addressType = "Văn phòng";
+
+                String defaultAddress = "";
+                if (binding.chkDefaultAddress.isChecked())
+                    defaultAddress = "x";
+
+                db.execSql("INSERT INTO " + AddressDatabaseHelper.TBL_NAME + " VALUES(null, '"
+                        + binding.edtAddressName.getText().toString() + "', '"
+                        + binding.edtAddressPhone.getText().toString() + "', '"
+                        + binding.edtAddress.getText().toString() + "', '"
+                        + binding.edtAddressDetail.getText().toString() + "', '"
+                        + addressType + "', '"
+                        + defaultAddress + "')");
+                finish();
+
+            }
+        });
+
+        binding.btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override
