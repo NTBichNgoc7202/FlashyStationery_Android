@@ -2,7 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:padding="10dp"
+    android:gravity="end"
+    android:background="@drawable/shadow_for_header">
 
-
+    <CheckBox
+        android:id="@+id/chk_SelectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tất cả"
+        android:textColor="#5d5c78"
+        android:textStyle="bold"
+        style="@style/CustomCheckbox"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng cộng: "
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100.000 đ"
+        android:textSize="15sp"
+        android:textColor="#5d5c78"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanh toán"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#5d5c78"
+        android:backgroundTint="#FBD3CA"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp" />
 </LinearLayout>

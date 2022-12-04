@@ -11,7 +11,7 @@
         android:background="#F7F8F4"
         android:orientation="vertical">
 
-        <include layout="@layout/cart_header" />
+        <include layout="@layout/cart_header"/>
         <ImageView
             android:id="@+id/imv_Empty"
             android:layout_width="match_parent"
