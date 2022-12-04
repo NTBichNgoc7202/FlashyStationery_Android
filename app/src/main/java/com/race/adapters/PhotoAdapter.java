@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.race.flashystationery.Photos;
+import com.race.flashystationery.R;
 
 import java.util.List;
 
