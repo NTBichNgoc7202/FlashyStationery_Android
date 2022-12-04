@@ -14,26 +14,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal"
-                    android:gravity="bottom">
-                        <SearchView
-                            android:id="@+id/search_home"
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/round_border_finding"
-                            android:queryHint="Bạn muốn tìm gì"/>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:gravity="bottom">-->
+<!--                        <SearchView-->
+<!--                            android:id="@+id/search_home"-->
+<!--                            android:layout_width="300dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/round_border_finding"-->
+<!--                            android:queryHint="Bạn muốn tìm gì"/>-->
 
-                        <ImageView
-                            android:id="@+id/imv_notification"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/notification_icon"
-                            android:layout_gravity="end"/>
-                </LinearLayout>
-
+<!--                        <ImageView-->
+<!--                            android:id="@+id/imv_notification"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:src="@drawable/notification_icon"-->
+<!--                            android:layout_gravity="end"/>-->
+<!--                </LinearLayout>-->
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

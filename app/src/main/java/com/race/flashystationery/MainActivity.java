@@ -32,11 +32,38 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,
                         NoteBookActivity.class);
-                intent.putExtra("noteList", "itembotebook");
+                intent.putExtra("noteList", "notebook");
                 startActivity(intent);
             }
         });
 
+        binding.imvBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,
+                        NoteBookActivity.class);
+                intent.putExtra("noteList", "book");
+                startActivity(intent);
+            }
+        });
+        binding.imvLearningTool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,
+                        NoteBookActivity.class);
+                intent.putExtra("noteList", "learningtool");
+                startActivity(intent);
+            }
+        });
+        binding.imvFiles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,
+                        NoteBookActivity.class);
+                intent.putExtra("noteList", "files");
+                startActivity(intent);
+            }
+        });
 
 
     }
