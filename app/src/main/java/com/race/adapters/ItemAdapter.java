@@ -67,7 +67,6 @@ public class ItemAdapter extends BaseAdapter {
             holder.chkSelect = view.findViewById(R.id.chk_Select);
 
             view.setClickable(true);
-
             view.setTag(holder);
         }
         else
@@ -79,7 +78,7 @@ public class ItemAdapter extends BaseAdapter {
         holder.txtName.setText(item.getItemName());
         holder.txtCategory.setText(item.getItemCategory());
         holder.txtDiscount.setText(item.getItemDiscount());
-        holder.txtPrice.setText(item.getItemPrice());
+        holder.txtPrice.setText(item.getItemPrice() + " đ");
         holder.txtNumber.setText(item.getItemNumber());
         holder.btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +92,12 @@ public class ItemAdapter extends BaseAdapter {
                 fragment.minusItem(item);
             }
         });
-
+        holder.txtCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.createBottomSheetCategory(item);
+            }
+        });
             return view;
     }
     public static class ViewHolder {

@@ -11,18 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.race.flashystationery.CartFragment;
-import com.race.flashystationery.CartFragment2;
 import com.race.flashystationery.R;
 import com.race.models.RebuyItem;
 
 import java.util.List;
 
 public class RebuyItemAdapter extends BaseAdapter {
-    CartFragment2 fragment;
+    CartFragment fragment;
     int item_layout;
     List<RebuyItem> rebuyItemList;
 
-    public RebuyItemAdapter(CartFragment2 fragment, int item_layout, List<RebuyItem> rebuyItemList) {
+    public RebuyItemAdapter(CartFragment fragment, int item_layout, List<RebuyItem> rebuyItemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
         this.rebuyItemList = rebuyItemList;
@@ -71,7 +70,7 @@ public class RebuyItemAdapter extends BaseAdapter {
         holder.imvThumb.setImageResource(item.getReThumb());
         holder.txtName.setText(item.getReName());
         holder.txtCategory.setText(item.getReCategory());
-        holder.txtPrice.setText(item.getRePrice());
+        holder.txtPrice.setText(item.getRePrice() + " đ");
         holder.txtNumber.setText(item.getReNumber());
         holder.btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override

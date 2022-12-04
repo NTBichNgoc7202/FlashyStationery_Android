@@ -2,9 +2,10 @@ package com.race.models;
 
 public class RebuyItem {
     int reThumb ;
-    String reName, reCategory, rePrice, reNumber;
+    String reName, reCategory, reNumber;
+    double rePrice;
 
-    public RebuyItem(int reThumb,String reNumber, String reName, String reCategory, String rePrice) {
+    public RebuyItem(int reThumb,String reNumber, String reName, String reCategory, double rePrice) {
         this.reThumb = reThumb;
         this.reName = reName;
         this.reCategory = reCategory;
@@ -36,11 +37,11 @@ public class RebuyItem {
         this.reCategory = reCategory;
     }
 
-    public String getRePrice() {
+    public double getRePrice() {
         return rePrice;
     }
 
-    public void setRePrice(String rePrice) {
+    public void setRePrice(double rePrice) {
         this.rePrice = rePrice;
     }
 
