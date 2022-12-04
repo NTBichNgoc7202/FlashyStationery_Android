@@ -10,32 +10,31 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFragment;
+import com.race.fragment.CartFragment2;
 import com.race.flashystationery.R;
-import com.race.models.Item;
+import com.race.models.RebuyItem;
 
 import java.util.List;
 
-public class ItemAdapter extends BaseAdapter {
-    CartFragment fragment;
+public class RebuyItemAdapter extends BaseAdapter {
+    CartFragment2 fragment;
     int item_layout;
-    List<Item> itemList;
+    List<RebuyItem> rebuyItemList;
 
-    public ItemAdapter(CartFragment fragment, int item_layout, List<Item> itemList) {
+    public RebuyItemAdapter(CartFragment2 fragment, int item_layout, List<RebuyItem> rebuyItemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
-        this.itemList = itemList;
+        this.rebuyItemList = rebuyItemList;
     }
-
 
     @Override
     public int getCount() {
-        return itemList.size();
+        return rebuyItemList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return itemList.get(i);
+        return rebuyItemList.get(i);
     }
 
     @Override
@@ -45,37 +44,34 @@ public class ItemAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder holder;
+        ItemAdapter.ViewHolder holder;
         if(view == null) {
-            holder = new ViewHolder();
+            holder = new ItemAdapter.ViewHolder();
             LayoutInflater inflater = (LayoutInflater) fragment.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(this.item_layout, null);
 
-            holder.imvThumb = view.findViewById(R.id.imv_ItemThumb);
-            holder.txtName = view.findViewById(R.id.txt_ItemName);
-            holder.txtCategory = view.findViewById(R.id.txt_ItemCategory);
-            holder.txtDiscount = view.findViewById(R.id.txt_ItemDiscount);
-            holder.txtPrice = view.findViewById(R.id.txt_ItemPrice);
-            holder.txtNumber = view.findViewById(R.id.txt_ItemNumber);
-            holder.btnPlus = view.findViewById(R.id.btn_Plus);
-            holder.btnMinus = view.findViewById(R.id.btn_Minus);
-            holder.chkSelect = view.findViewById(R.id.chk_Select);
+            holder.imvThumb = view.findViewById(R.id.imv_ReThumb);
+            holder.txtName = view.findViewById(R.id.txt_ReName);
+            holder.txtCategory = view.findViewById(R.id.txt_ReCategory);
+            holder.txtPrice = view.findViewById(R.id.txt_RePrice);
+            holder.txtNumber = view.findViewById(R.id.txt_ReNumber);
+            holder.btnPlus = view.findViewById(R.id.btn_RePlus);
+            holder.btnMinus = view.findViewById(R.id.btn_ReMinus);
+            holder.chkSelect = view.findViewById(R.id.chk_ReSelect);
 
             view.setClickable(true);
-
             view.setTag(holder);
         }
         else
         {
-            holder = (ViewHolder)view.getTag();
+            holder = (ItemAdapter.ViewHolder)view.getTag();
         }
-        Item item = itemList.get(i);
-        holder.imvThumb.setImageResource(item.getItemThumb());
-        holder.txtName.setText(item.getItemName());
-        holder.txtCategory.setText(item.getItemCategory());
-        holder.txtDiscount.setText(item.getItemDiscount());
-        holder.txtPrice.setText(item.getItemPrice());
-        holder.txtNumber.setText(item.getItemNumber());
+        RebuyItem item = rebuyItemList.get(i);
+        holder.imvThumb.setImageResource(item.getReThumb());
+        holder.txtName.setText(item.getReName());
+        holder.txtCategory.setText(item.getReCategory());
+        holder.txtPrice.setText(item.getRePrice());
+        holder.txtNumber.setText(item.getReNumber());
         holder.btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,12 +84,11 @@ public class ItemAdapter extends BaseAdapter {
                 fragment.minusItem(item);
             }
         });
-
-            return view;
+        return view;
     }
     public static class ViewHolder {
         ImageView imvThumb;
-        TextView txtName, txtCategory, txtDiscount, txtPrice, txtNumber;
+        TextView txtName, txtCategory, txtPrice, txtNumber;
         Button btnPlus, btnMinus;
         CheckBox chkSelect;
     }
