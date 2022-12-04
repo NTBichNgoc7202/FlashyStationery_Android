@@ -10,18 +10,18 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFragment;
+import com.race.fragment.CartFullFragment;
 import com.race.flashystationery.R;
 import com.race.models.Item;
 
 import java.util.List;
 
 public class ItemAdapter extends BaseAdapter {
-    CartFragment fragment;
+    CartFullFragment fragment;
     int item_layout;
     List<Item> itemList;
 
-    public ItemAdapter(CartFragment fragment, int item_layout, List<Item> itemList) {
+    public ItemAdapter(CartFullFragment fragment, int item_layout, List<Item> itemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
         this.itemList = itemList;

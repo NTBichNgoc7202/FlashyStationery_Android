@@ -8,22 +8,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFragment;
+import com.race.fragment.CartFullFragment;
 import com.race.flashystationery.R;
-import com.race.fragment.CartFragment;
-import com.race.models.Item;
 import com.race.models.ItemModel;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
 public class ItemModelAdapter extends BaseAdapter {
-    CartFragment fragment;
+    CartFullFragment fragment;
     int item_layout;
     List<ItemModel> itemList;
 
-    public ItemModelAdapter(CartFragment fragment, int item_layout, List<ItemModel> itemList) {
+    public ItemModelAdapter(CartFullFragment fragment, int item_layout, List<ItemModel> itemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
         this.itemList = itemList;

@@ -10,19 +10,18 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFragment;
 import com.race.flashystationery.R;
-import com.race.fragment.CartFragment;
+import com.race.fragment.CartRebuyFragment;
 import com.race.models.RebuyItem;
 
 import java.util.List;
 
 public class RebuyItemAdapter extends BaseAdapter {
-    CartFragment fragment;
+    CartRebuyFragment fragment;
     int item_layout;
     List<RebuyItem> rebuyItemList;
 
-    public RebuyItemAdapter(CartFragment fragment, int item_layout, List<RebuyItem> rebuyItemList) {
+    public RebuyItemAdapter(CartRebuyFragment fragment, int item_layout, List<RebuyItem> rebuyItemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
         this.rebuyItemList = rebuyItemList;
@@ -45,9 +44,9 @@ public class RebuyItemAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ItemAdapter.ViewHolder holder;
+        RebuyItemAdapter.ViewHolder holder;
         if(view == null) {
-            holder = new ItemAdapter.ViewHolder();
+            holder = new RebuyItemAdapter.ViewHolder();
             LayoutInflater inflater = (LayoutInflater) fragment.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(this.item_layout, null);
 
@@ -65,7 +64,7 @@ public class RebuyItemAdapter extends BaseAdapter {
         }
         else
         {
-            holder = (ItemAdapter.ViewHolder)view.getTag();
+            holder = (RebuyItemAdapter.ViewHolder)view.getTag();
         }
         RebuyItem item = rebuyItemList.get(i);
         holder.imvThumb.setImageResource(item.getReThumb());

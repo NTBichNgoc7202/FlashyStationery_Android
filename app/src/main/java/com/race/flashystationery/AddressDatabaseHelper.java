@@ -66,7 +66,7 @@ public class AddressDatabaseHelper extends SQLiteOpenHelper {
         if (getNumberOfRows() == 0){
             execSql("INSERT INTO " + TBL_NAME + " VALUES(null, 'Nguyễn Trần Bích Ngọc', " +
                     "'0123456789', 'TP.Hồ Chí Minh, Thành Phố Thủ Đức, phường Linh Trung', " +
-                    "'KTX Khu B', 'Nhà riêng', true)");
+                    "'KTX Khu B', 'Nhà riêng', 1)");
 
         }
     }

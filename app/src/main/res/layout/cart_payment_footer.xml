@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentBottom="true"
-    android:padding="10dp"
+    android:layout_height="wrap_content"
     android:gravity="end"
-    android:background="@drawable/shadow_for_header">
+    android:paddingHorizontal="10dp"
+    android:background="#F7F8F4"
+    android:layout_alignParentBottom="true">
 
     <CheckBox
         android:id="@+id/chk_SelectAll"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tổng cộng: "
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="#000000"/>
     <TextView
@@ -40,5 +40,5 @@
         android:textColor="#5d5c78"
         android:backgroundTint="#FBD3CA"
         android:textStyle="bold"
-        android:layout_marginStart="30dp" />
+        android:layout_marginStart="10dp" />
 </LinearLayout>
