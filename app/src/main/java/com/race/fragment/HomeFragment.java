@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.Toolbar;
 
+import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentHomeBinding;
 
 

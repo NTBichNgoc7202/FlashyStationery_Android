@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.race.flashystationery.AddressListActivity;
+import com.race.flashystationery.NotificationActivity;
+import com.race.flashystationery.OrderTrackingActivity;
+import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -44,6 +48,13 @@ public class AccountFragment extends Fragment {
     }
 
     private void addEvents() {
+        binding.llChoXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), OrderTrackingActivity.class));
+            }
+        });
+
         binding.llFavoriteProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +65,7 @@ public class AccountFragment extends Fragment {
         binding.llAddressList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),AddressListActivity.class));
+                startActivity(new Intent(getActivity(), AddressListActivity.class));
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,11 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.race.adapters.ItemAdapter;
 import com.race.adapters.RebuyItemAdapter;
+import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCart2Binding;
-import com.race.flashystationery.databinding.FragmentCartBinding;
-import com.race.models.Item;
 import com.race.models.RebuyItem;
 
 import java.util.ArrayList;
