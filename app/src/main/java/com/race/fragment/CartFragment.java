@@ -1,6 +1,7 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -13,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -22,6 +24,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.race.adapters.ItemAdapter;
 import com.race.adapters.ItemModelAdapter;
 import com.race.adapters.RebuyItemAdapter;
+import com.race.flashystationery.ProductActivity;
+import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.ActivityCartBinding;
 import com.race.flashystationery.databinding.FragmentCartBinding;
 import com.race.models.Item;
@@ -174,11 +178,14 @@ public class CartFragment extends Fragment {
             ImageView imvSelectedItem;
             TextView txtSelectedPrice, txtSelectedCategory;
             RadioButton rad80, rad100;
+            Button btnConfirm, btnShowDetail;
             GridView gvItemModel;
 
             imvSelectedItem = bottomSheetDialog.findViewById(R.id.imv_SelectedItem);
             txtSelectedPrice = bottomSheetDialog.findViewById(R.id.txt_SelectedPrice);
             txtSelectedCategory = bottomSheetDialog.findViewById(R.id.txt_SelectedCategory);
+            btnConfirm = bottomSheetDialog.findViewById(R.id.btn_Confirm);
+            btnShowDetail = bottomSheetDialog.findViewById(R.id.btn_ShowDetail);
             rad80 = bottomSheetDialog.findViewById(R.id.rad_80);
             rad100 = bottomSheetDialog.findViewById(R.id.rad_100);
             gvItemModel = bottomSheetDialog.findViewById(R.id.gv_ItemModel);
@@ -198,8 +205,20 @@ public class CartFragment extends Fragment {
 
             modelAdapter = new ItemModelAdapter(CartFragment.this, R.layout.item_model_list, itemModels);
             gvItemModel.setAdapter(modelAdapter);
-            gvItemModel.setSelection(5);
 
+            btnConfirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    bottomSheetDialog.dismiss();
+                }
+            });
+            btnShowDetail.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ProductActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
         bottomSheetDialog.show();
     }

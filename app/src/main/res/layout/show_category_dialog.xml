@@ -89,7 +89,9 @@
                 android:textSize="15sp"
                 android:checked="true"
                 style="@style/CustomRadiobutton"/>
+
         </LinearLayout>
+    </RadioGroup>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +106,29 @@
             android:layout_height="wrap_content"
             android:numColumns="4"
             android:listSelector="@android:color/holo_blue_dark"/>
-    </RadioGroup>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_ShowDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#5d5c78"
+            android:text="Thông tin sản phẩm"
+            android:textAllCaps="false"
+            android:backgroundTint="#FBD3CA"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_Confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#5d5c78"
+            android:text="Xác nhận"
+            android:textAllCaps="false"
+            android:backgroundTint="#FBD3CA"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>
