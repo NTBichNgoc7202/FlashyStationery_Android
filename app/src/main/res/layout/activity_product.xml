@@ -28,6 +28,7 @@
                     android:layout_height="400dp" />
 
                 <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/ccIndicator"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center|bottom" />
@@ -718,7 +719,7 @@
           android:src="@drawable/more"/>
     </LinearLayout>
 <!--    footer-->
-<!--    <LinearLayout
+    <LinearLayout
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -753,7 +754,5 @@
             android:textStyle="bold"
             android:background="#D8BDC1"/>
 
-        &lt;!&ndash;đánh giá sản phẩm&ndash;&gt;
-
-    </LinearLayout>-->
+    </LinearLayout>
 </FrameLayout>
