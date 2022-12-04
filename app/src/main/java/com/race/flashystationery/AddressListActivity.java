@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.race.adapters.AddressAdapter;
 import com.race.flashystationery.databinding.ActivityAddressListBinding;
@@ -21,7 +22,7 @@ public class AddressListActivity extends AppCompatActivity {
     ActivityAddressListBinding binding;
     AddressAdapter adapter;
     ArrayList<Address> addresses;
-    AddressDatabaseHelper db;
+    public static AddressDatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,18 +55,37 @@ public class AddressListActivity extends AppCompatActivity {
         db.createSampleData();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+    }
+
     private void loadData() {
         addresses = new ArrayList<>();
-        Cursor c = db.getData();
-        while (c.moveToNext()){
-            addresses.add(new Address(c.getString(1),c.getString(2),
-                    c.getString(4),c.getString(3),c.getString(5),c.getInt(6)));
-        }
-        c.close();
+        addresses.clear();
 
-        adapter = new AddressAdapter(AddressListActivity.this,R.layout.address_listview,
-                addresses);
-        binding.lvAddress.setAdapter(adapter);
+        Cursor c = db.getData();
+
+        if (c.getCount() == 0)
+            Toast.makeText(AddressListActivity.this, "No data to load",
+                    Toast.LENGTH_SHORT).show();
+        else {
+            while (c.moveToNext()){
+                addresses.add(new Address(c.getInt(0), c.getString(1),c.getString(2),
+                        c.getString(3),c.getString(4),c.getString(5),c.getString(6)));
+            }
+            c.close();
+
+            adapter = new AddressAdapter(AddressListActivity.this,R.layout.address_listview,
+                    addresses);
+            binding.lvAddress.setAdapter(adapter);
+        }
+//        c.close();
+//
+//        adapter = new AddressAdapter(AddressListActivity.this,R.layout.address_listview,
+//                addresses);
+//        binding.lvAddress.setAdapter(adapter);
     }
 
     @Override
