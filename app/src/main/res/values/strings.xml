@@ -10,6 +10,9 @@
     <string name="onboarding_start">BẮT ĐẦU</string>
     <string name="cart_header_title">Giỏ hàng của tôi</string>
     <string name="user_acc_title">Hồ sơ người dùng</string>
+    <string name="registernow"><b><u>ĐĂNG KÝ NGAY</u></b></string>
+    <string name="loginnow"><b><u>ĐĂNG NHẬP NGAY</u></b></string>
+    <string name="otpverificationnow"><b><u>GỬI LẠI MÃ XÁC NHẬN</u></b></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
