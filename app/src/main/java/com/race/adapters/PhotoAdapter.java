@@ -25,13 +25,17 @@ public class PhotoAdapter extends PagerAdapter {
         this.photosList = photosList;
     }
 
+    private int[] list_photo = {R.drawable.plan_notebook, R.drawable.plan_notebook1,
+            R.drawable.plan_notebook2, R.drawable.plan_notebook3};
+
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = LayoutInflater.from(container.getContext()).inflate(R.layout.product_photo, container, false);
+
         ImageView imgPhoto = view.findViewById(R.id.img_Photo);
         Photos photos = photosList.get(position);
-        if (photos!= null)
+        if (photosList != null)
         {
             Glide.with(context).load(photos.getResource_id()).into(imgPhoto);
         }
