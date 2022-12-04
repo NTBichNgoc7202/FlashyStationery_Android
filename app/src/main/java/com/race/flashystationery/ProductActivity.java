@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.ViewParent;
-import android.view.animation.CycleInterpolator;
 
+import com.race.adapters.PhotoAdapter;
 import com.race.flashystationery.databinding.ActivityProductBinding;
 
 import java.util.ArrayList;
