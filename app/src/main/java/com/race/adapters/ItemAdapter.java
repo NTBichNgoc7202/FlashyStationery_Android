@@ -1,6 +1,5 @@
 package com.race.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +10,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.fragment.app.FragmentActivity;
-
-import com.race.flashystationery.CartActivity;
-import com.race.flashystationery.CartFragment;
+import com.race.fragment.CartFragment;
 import com.race.flashystationery.R;
-import com.race.flashystationery.databinding.FragmentCartBinding;
 import com.race.models.Item;
 
 import java.util.List;

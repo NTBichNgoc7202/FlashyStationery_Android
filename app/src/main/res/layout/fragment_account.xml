@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:background="#4DD3D3D3"
+                android:background="@drawable/user_name_shadow"
                 android:elevation="0dp"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="5dp"
@@ -73,7 +73,7 @@
                         android:layout_height="wrap_content"
                         android:text="Chờ\nxác nhận"
                         android:textColor="#D8BDC1"
-                        android:gravity="center_horizontal"/>
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:text="Chờ\nlấy hàng"
                         android:textColor="#D8BDC1"
-                        android:gravity="center_horizontal"/>
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -169,6 +169,7 @@
                 android:textColor="#5D5C78" />
 
             <LinearLayout
+                android:id="@+id/ll_FavoriteProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -185,10 +186,12 @@
                     android:layout_height="wrap_content"
                     android:text="Sản phẩm yêu thích"
                     android:textSize="20sp"
+                    android:textColor="@color/black_coral"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_AccountSetting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -205,10 +208,12 @@
                     android:layout_height="wrap_content"
                     android:text="Thiết lập tài khoản"
                     android:textSize="20sp"
+                    android:textColor="@color/black_coral"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_AddressList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -225,10 +230,12 @@
                     android:layout_height="wrap_content"
                     android:text="Sổ địa chỉ"
                     android:textSize="20sp"
+                    android:textColor="@color/black_coral"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_Policy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -245,10 +252,12 @@
                     android:layout_height="wrap_content"
                     android:text="Chính sách"
                     android:textSize="20sp"
+                    android:textColor="@color/black_coral"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_Support"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -265,6 +274,7 @@
                     android:layout_height="wrap_content"
                     android:text="Hỗ trợ khách hàng"
                     android:textSize="20sp"
+                    android:textColor="@color/black_coral"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
