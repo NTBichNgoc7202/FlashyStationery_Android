@@ -78,6 +78,7 @@ public class CartFullFragment extends Fragment {
     @Override
     public void onResume() {
         showEmptyView();
+        loadFullData();
         super.onResume();
     }
 

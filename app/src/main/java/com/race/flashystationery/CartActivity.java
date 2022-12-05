@@ -38,8 +38,8 @@ public class CartActivity extends AppCompatActivity {
     }
 
     private void loadTabView() {
-        adapter = new CartTabViewAdapter(this);
-        binding.vpCart.setAdapter(adapter);
+        //adapter = new CartTabViewAdapter(this);
+        //binding.vpCart.setAdapter(adapter);
         binding.vpCart.setUserInputEnabled(false);
         binding.tlCart.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

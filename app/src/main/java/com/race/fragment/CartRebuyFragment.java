@@ -35,8 +35,8 @@ public class CartRebuyFragment extends Fragment {
     }
     private void loadRebuyData() {
         rebuyItems = new ArrayList<>();
-        rebuyItems.add(new RebuyItem(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", 48000));
-        rebuyItems.add(new RebuyItem(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", 48000));
+//        rebuyItems.add(new RebuyItem(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", 48000));
+//        rebuyItems.add(new RebuyItem(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", 48000));
 
         rebuyAdapter = new RebuyItemAdapter(CartRebuyFragment.this, R.layout.rebuy_item_list, rebuyItems);
         binding.lvRebuyItem.setAdapter(rebuyAdapter);
