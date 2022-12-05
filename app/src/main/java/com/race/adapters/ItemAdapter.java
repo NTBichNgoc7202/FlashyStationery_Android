@@ -1,6 +1,5 @@
 package com.race.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +10,19 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.race.fragment.CartFullFragment;
 import com.race.flashystationery.R;
 import com.race.models.Item;
 
 import java.util.List;
 
 public class ItemAdapter extends BaseAdapter {
-    Activity activity;
+    CartFullFragment fragment;
     int item_layout;
     List<Item> itemList;
 
-    public ItemAdapter(Activity activity, int item_layout, List<Item> itemList) {
-        this.activity = activity;
+    public ItemAdapter(CartFullFragment fragment, int item_layout, List<Item> itemList) {
+        this.fragment = fragment;
         this.item_layout = item_layout;
         this.itemList = itemList;
     }
@@ -48,7 +48,7 @@ public class ItemAdapter extends BaseAdapter {
         ViewHolder holder;
         if(view == null) {
             holder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) fragment.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(this.item_layout, null);
 
             holder.imvThumb = view.findViewById(R.id.imv_ItemThumb);
@@ -57,7 +57,11 @@ public class ItemAdapter extends BaseAdapter {
             holder.txtDiscount = view.findViewById(R.id.txt_ItemDiscount);
             holder.txtPrice = view.findViewById(R.id.txt_ItemPrice);
             holder.txtNumber = view.findViewById(R.id.txt_ItemNumber);
+            holder.btnPlus = view.findViewById(R.id.btn_Plus);
+            holder.btnMinus = view.findViewById(R.id.btn_Minus);
+            holder.chkSelect = view.findViewById(R.id.chk_Select);
 
+            view.setClickable(true);
             view.setTag(holder);
         }
         else
@@ -69,15 +73,32 @@ public class ItemAdapter extends BaseAdapter {
         holder.txtName.setText(item.getItemName());
         holder.txtCategory.setText(item.getItemCategory());
         holder.txtDiscount.setText(item.getItemDiscount());
-        holder.txtPrice.setText(item.getItemPrice());
+        holder.txtPrice.setText(item.getItemPrice() + " đ");
         holder.txtNumber.setText(item.getItemNumber());
-
-
-
+        holder.btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.plusItem(item);
+            }
+        });
+        holder.btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.minusItem(item);
+            }
+        });
+        holder.txtCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.createBottomSheetCategory(item);
+            }
+        });
             return view;
     }
     public static class ViewHolder {
         ImageView imvThumb;
         TextView txtName, txtCategory, txtDiscount, txtPrice, txtNumber;
+        Button btnPlus, btnMinus;
+        CheckBox chkSelect;
     }
 }

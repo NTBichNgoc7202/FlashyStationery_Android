@@ -4,10 +4,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 
 public class Item {
-    int itemThumb ;
-    String itemName, itemCategory, itemDiscount, itemPrice, itemNumber;
+    int itemThumb;
+    String itemName, itemCategory, itemDiscount, itemNumber;
+    double itemPrice;
 
-    public Item(int itemThumb, String itemNumber, String itemName, String itemCategory, String itemDiscount, String itemPrice) {
+    public Item(int itemThumb, String itemNumber, String itemName, String itemCategory, String itemDiscount, double itemPrice) {
         this.itemThumb = itemThumb;
         this.itemNumber = itemNumber;
         this.itemName = itemName;
@@ -56,11 +57,11 @@ public class Item {
         this.itemDiscount = itemDiscount;
     }
 
-    public String getItemPrice() {
+    public double getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(String itemPrice) {
+    public void setItemPrice(double itemPrice) {
         this.itemPrice = itemPrice;
     }
 }
