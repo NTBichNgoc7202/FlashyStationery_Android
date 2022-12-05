@@ -2,7 +2,6 @@ package com.race.flashystationery;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -77,7 +76,7 @@ public class AddressListActivity extends AppCompatActivity {
             }
             c.close();
 
-            adapter = new AddressAdapter(AddressListActivity.this,R.layout.address_listview,
+            adapter = new AddressAdapter(AddressListActivity.this,R.layout.address_item_listview,
                     addresses);
             binding.lvAddress.setAdapter(adapter);
         }
