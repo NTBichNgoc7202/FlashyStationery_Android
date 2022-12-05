@@ -173,6 +173,11 @@ public class RegisterActivity extends AppCompatActivity {
                     //Clear the entered passwords
                     edtInputPassword.clearComposingText();
                     edtInputConfirmPassword.clearComposingText();
+                } else {
+                    textGender = radioButtonRegisterGenderSelected.getText().toString();
+                    progressBar.setVisibility(View.VISIBLE);
+                    registerUser(textFullName, textPhoneNumber, textEmail, textDOB, textGender, textPassword);
+
                 }
 
 
@@ -210,7 +215,9 @@ public class RegisterActivity extends AppCompatActivity {
 //            }
 //        });
     }
-
+//Register User using the credentials given
+    private void registerUser(String textFullName, String textPhoneNumber, String textEmail, String textDOB, String textGender, String textPassword) {
+    }
 
 
 }

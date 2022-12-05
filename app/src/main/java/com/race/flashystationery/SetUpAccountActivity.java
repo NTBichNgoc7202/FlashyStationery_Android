@@ -2,6 +2,7 @@ package com.race.flashystationery;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -17,6 +18,7 @@ public class SetUpAccountActivity extends AppCompatActivity {
     private ImageView imageView;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
