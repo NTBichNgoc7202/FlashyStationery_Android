@@ -1,4 +1,4 @@
-package com.race.fragment;
+package com.race.fragments;
 
 import android.os.Bundle;
 

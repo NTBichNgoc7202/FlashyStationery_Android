@@ -1,15 +1,13 @@
-package com.race.fragment;
+package com.race.fragments;
 
-import android.nfc.Tag;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,8 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
-import android.widget.Toolbar;
 
+import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentHomeBinding;
 
@@ -35,12 +33,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar()
-                        .setDisplayShowTitleEnabled(false);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         setHasOptionsMenu(true);
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
 
+        return view;
 
     }
 
@@ -55,5 +55,15 @@ public class HomeFragment extends Fragment {
         searchView.setBackgroundResource(R.drawable.round_border_finding);
 
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.app_Bar_Search){
+
+        } else if (item.getItemId() == R.id.app_Bar_Notify){
+            startActivity(new Intent(getActivity(), NotificationActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

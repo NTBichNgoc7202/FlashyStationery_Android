@@ -1,4 +1,4 @@
-package com.race.fragment;
+package com.race.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import com.race.flashystationery.R;
 
-public class OrderTakingFragment extends Fragment {
+public class OrderCancelFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,6 @@ public class OrderTakingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_order_confirm, container, false);
+        return inflater.inflate(R.layout.fragment_order_cancel, container, false);
     }
 }

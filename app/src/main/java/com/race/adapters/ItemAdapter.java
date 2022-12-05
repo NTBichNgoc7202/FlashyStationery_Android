@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFullFragment;
+import com.race.fragments.CartFullFragment;
 import com.race.flashystationery.R;
 import com.race.models.Item;
 
