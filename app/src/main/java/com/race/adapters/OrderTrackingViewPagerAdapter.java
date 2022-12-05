@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.race.fragment.OrderCancelFragment;
+import com.race.fragment.OrderCancelRefundFragment;
 import com.race.fragment.OrderConfirmFragment;
 import com.race.fragment.OrderDeliverFragment;
 import com.race.fragment.OrderReviewFragment;
@@ -29,7 +29,7 @@ public class OrderTrackingViewPagerAdapter extends FragmentStateAdapter {
             case 3:
                 return new OrderReviewFragment();
             case 4:
-                return new OrderCancelFragment();
+                return new OrderCancelRefundFragment();
             default:
                 return new OrderConfirmFragment();
         }

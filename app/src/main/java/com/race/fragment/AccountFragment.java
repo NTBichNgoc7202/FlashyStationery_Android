@@ -26,8 +26,6 @@ import com.race.flashystationery.databinding.FragmentAccountBinding;
 public class AccountFragment extends Fragment {
 
     FragmentAccountBinding binding;
-    ViewPager2 viewPager = OrderTrackingActivity.trackingViewPager;
-    TabLayout tabLayout = OrderTrackingActivity.trackingTabLayout;
 
     public AccountFragment() {
         // Required empty public constructor
