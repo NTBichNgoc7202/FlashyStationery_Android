@@ -36,5 +36,3 @@
             app:itemPaddingBottom="7dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
