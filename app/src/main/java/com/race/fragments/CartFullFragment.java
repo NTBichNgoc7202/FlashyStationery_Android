@@ -1,4 +1,4 @@
-package com.race.fragment;
+package com.race.fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

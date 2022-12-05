@@ -8,19 +8,6 @@
     android:orientation="vertical"
     android:background="@color/cultured">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tl_OrderCancelRefund"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/black_coral"
-        app:tabTextColor="@color/pale_silver"
-        app:tabIndicatorColor="@color/black_coral"
-        app:tabMode="scrollable"
-        android:background="@drawable/tab_layout_shadow"/>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp_OrderCancelRefund"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 </LinearLayout>
