@@ -18,32 +18,44 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.race.adapters.CartTabViewAdapter;
 import com.race.flashystationery.R;
-import com.race.flashystationery.databinding.ActivityCartBinding;
 import com.race.flashystationery.databinding.FragmentCartBinding;
-import com.race.flashystationery.databinding.FragmentCartFullBinding;
 
 public class CartFragment extends Fragment {
 
     FragmentCartBinding binding;
     CartTabViewAdapter adapter;
-    Menu menu;
+//    ViewPager2 vpCart;
+//    TabLayout tlCart;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity) getActivity()).getSupportActionBar()
-                .setDisplayShowTitleEnabled(true);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Giỏ hàng của tôi");
+
         setHasOptionsMenu(true);
-        loadTabView();
+//        vpCart = binding.vpCart;
+//        tlCart = binding.tlCart;
+
 
         binding = FragmentCartBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         return view;
     }
 
+    @Override
+    public void onResume() {
+        loadTabView();
+        super.onResume();
+    }
 
     private void loadTabView() {
-        adapter = new CartTabViewAdapter(getActivity());
+
+        adapter = new CartTabViewAdapter(this);
+//        vpCart = getActivity().findViewById(R.id.vp_Cart);
+//        tlCart = getActivity().findViewById(R.id.tl_Cart);
+
         binding.vpCart.setAdapter(adapter);
         binding.vpCart.setUserInputEnabled(false);
         binding.tlCart.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -62,6 +74,20 @@ public class CartFragment extends Fragment {
 
             }
         });
+//        new TabLayoutMediator(tlCart, vpCart,
+//                new TabLayoutMediator.TabConfigurationStrategy() {
+//                    @Override
+//                    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+//                        switch (position) {
+//                            case 0:
+//                                tab.setText("Tất cả");
+//                                break;
+//                            case 1:
+//                                tab.setText("Mua lại");
+//                                break;
+//                        }
+//                    }
+//                }).attach();
         binding.vpCart.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -70,6 +96,7 @@ public class CartFragment extends Fragment {
             }
         });
     }
+
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu,@NonNull MenuInflater inflater) {
