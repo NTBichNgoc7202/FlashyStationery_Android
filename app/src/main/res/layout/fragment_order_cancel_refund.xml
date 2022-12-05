@@ -15,7 +15,6 @@
         app:tabSelectedTextColor="@color/black_coral"
         app:tabTextColor="@color/pale_silver"
         app:tabIndicatorColor="@color/black_coral"
-        app:tabMode="scrollable"
         android:background="@drawable/tab_layout_shadow"/>
 
     <androidx.viewpager2.widget.ViewPager2
