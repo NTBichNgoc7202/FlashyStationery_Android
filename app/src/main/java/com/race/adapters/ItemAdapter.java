@@ -10,18 +10,18 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.race.fragment.CartFragment;
+import com.race.fragment.CartFullFragment;
 import com.race.flashystationery.R;
 import com.race.models.Item;
 
 import java.util.List;
 
 public class ItemAdapter extends BaseAdapter {
-    CartFragment fragment;
+    CartFullFragment fragment;
     int item_layout;
     List<Item> itemList;
 
-    public ItemAdapter(CartFragment fragment, int item_layout, List<Item> itemList) {
+    public ItemAdapter(CartFullFragment fragment, int item_layout, List<Item> itemList) {
         this.fragment = fragment;
         this.item_layout = item_layout;
         this.itemList = itemList;
@@ -62,7 +62,6 @@ public class ItemAdapter extends BaseAdapter {
             holder.chkSelect = view.findViewById(R.id.chk_Select);
 
             view.setClickable(true);
-
             view.setTag(holder);
         }
         else
@@ -74,7 +73,7 @@ public class ItemAdapter extends BaseAdapter {
         holder.txtName.setText(item.getItemName());
         holder.txtCategory.setText(item.getItemCategory());
         holder.txtDiscount.setText(item.getItemDiscount());
-        holder.txtPrice.setText(item.getItemPrice());
+        holder.txtPrice.setText(item.getItemPrice() + " đ");
         holder.txtNumber.setText(item.getItemNumber());
         holder.btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +87,12 @@ public class ItemAdapter extends BaseAdapter {
                 fragment.minusItem(item);
             }
         });
-
+        holder.txtCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragment.createBottomSheetCategory(item);
+            }
+        });
             return view;
     }
     public static class ViewHolder {
