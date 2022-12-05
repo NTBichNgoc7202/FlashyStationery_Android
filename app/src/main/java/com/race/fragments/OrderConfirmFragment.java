@@ -1,15 +1,16 @@
-package com.race.fragment;
+package com.race.fragments;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
-
 import com.race.flashystationery.R;
 
-public class OrderRefundFragment extends Fragment {
+public class OrderConfirmFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.race.fragments.OrderCancelFragment;
+import com.race.fragments.OrderNotReviewFragment;
 import com.race.fragments.OrderRefundFragment;
+import com.race.fragments.OrderReviewedFragment;
 
-public class OrderCancelRefundViewPagerAdapter extends FragmentStateAdapter {
-    public OrderCancelRefundViewPagerAdapter(@NonNull Fragment fragment) {
+public class OrderReviewViewPagerAdapter extends FragmentStateAdapter {
+    public OrderReviewViewPagerAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }
 
@@ -17,11 +19,11 @@ public class OrderCancelRefundViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new OrderCancelFragment();
+                return new OrderNotReviewFragment();
             case 1:
-                return new OrderRefundFragment();
+                return new OrderReviewedFragment();
             default:
-                return new OrderCancelFragment();
+                return new OrderNotReviewFragment();
         }
     }
 

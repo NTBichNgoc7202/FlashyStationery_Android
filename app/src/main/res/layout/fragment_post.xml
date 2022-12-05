@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#F7F8F4"
     android:layout_margin="10dp"
-    tools:context="com.race.fragment.PostFragment">
+    tools:context="com.race.fragments.PostFragment">
 
     <LinearLayout
         android:id="@+id/allpost"
