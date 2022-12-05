@@ -26,8 +26,14 @@ public class ProductActivity extends AppCompatActivity {
         binding = ActivityProductBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        photoAdapter = new PhotoAdapter(this, getListPhotos());
+        viewPager = binding.viewpager;
+        ccIndicatior = binding.ccIndicator;
+
+        photoAdapter = new PhotoAdapter(ProductActivity.this, getListPhotos());
         viewPager.setAdapter(photoAdapter);
+
+        ccIndicatior.createIndicators(4,0);
+        ccIndicatior.animatePageSelected(2);
         ccIndicatior.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(ccIndicatior.getDataSetObserver());
     }

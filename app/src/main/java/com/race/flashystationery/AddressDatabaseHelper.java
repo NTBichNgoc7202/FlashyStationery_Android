@@ -30,11 +30,11 @@ public class AddressDatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS " + TBL_NAME + "( "
                 + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COL_NAME + " VARCHAR(30), "
-                + COL_PHONE + " INTEGER, "
+                + COL_PHONE + " VARCHAR(10), "
                 + COL_ADDRESS + " VARCHAR(100), "
                 + COL_DETAIL + " VARCHAR(150), "
                 + COL_TYPE + " VARCHAR(10), "
-                + COL_DEFAULT + " INTEGER)");
+                + COL_DEFAULT + " VARCHAR(1))");
     }
 
     @Override
@@ -45,7 +45,7 @@ public class AddressDatabaseHelper extends SQLiteOpenHelper {
 
     //SELECT
     public Cursor getData(){
-        SQLiteDatabase db = getWritableDatabase();
+        SQLiteDatabase db = getReadableDatabase();
         return db.rawQuery("SELECT * FROM " + TBL_NAME, null);
     }
 
@@ -66,8 +66,7 @@ public class AddressDatabaseHelper extends SQLiteOpenHelper {
         if (getNumberOfRows() == 0){
             execSql("INSERT INTO " + TBL_NAME + " VALUES(null, 'Nguyễn Trần Bích Ngọc', " +
                     "'0123456789', 'TP.Hồ Chí Minh, Thành Phố Thủ Đức, phường Linh Trung', " +
-                    "'KTX Khu B', 'Nhà riêng', 1)");
-
+                    "'KTX Khu B', 'Nhà riêng', 'x')");
         }
     }
 }
