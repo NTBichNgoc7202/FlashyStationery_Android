@@ -4,26 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TableLayout;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.race.adapters.OrderTrackingViewPagerAdapter;
 import com.race.flashystationery.databinding.ActivityOrderTrackingBinding;
-import com.race.fragment.OrderCancelFragment;
-import com.race.fragment.OrderConfirmFragment;
-import com.race.fragment.OrderDeliverFragment;
-import com.race.fragment.OrderReviewFragment;
-import com.race.fragment.OrderTakingFragment;
 
 public class OrderTrackingActivity extends AppCompatActivity {
 
     ActivityOrderTrackingBinding binding;
-    ViewPager2 trackingViewPager;
-    TabLayout trackingTabLayout;
+    public static ViewPager2 trackingViewPager;
+    public static TabLayout trackingTabLayout;
     OrderTrackingViewPagerAdapter viewPagerAdapter;
+    int extraPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +33,17 @@ public class OrderTrackingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         customOrderTrackingActivity();
+        loadData();
+    }
+
+    private void loadData() {
+        Intent intent = getIntent();
+        if (intent == null)
+            extraPosition = 0;
+        else
+            extraPosition = intent.getIntExtra("position",0);
+
+        trackingViewPager.setCurrentItem(extraPosition);
     }
 
     private void customOrderTrackingActivity() {
@@ -46,6 +53,7 @@ public class OrderTrackingActivity extends AppCompatActivity {
         trackingTabLayout = binding.tlOrderTracking;
 
         trackingViewPager.setAdapter(viewPagerAdapter);
+
         new TabLayoutMediator(trackingTabLayout, trackingViewPager,
                 new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
@@ -69,7 +77,6 @@ public class OrderTrackingActivity extends AppCompatActivity {
                 }
             }
         }).attach();
-
     }
 
     @Override
