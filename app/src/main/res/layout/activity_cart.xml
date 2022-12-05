@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CartActivity"
-    android:background="#F7F8F4"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-        <include layout="@layout/cart_header" />
-
-        <ListView
-            android:id="@+id/lv_Item"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_Cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="30dp"/>
+            app:tabSelectedTextColor="@color/black_coral"
+            app:tabTextColor="#66000000"
+            app:tabIndicatorColor="#FBD3CA"
+            android:background="@drawable/tab_layout_shadow">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tất cả"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mua lại"/>
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vp_Cart" />
+
+
 
 </LinearLayout>

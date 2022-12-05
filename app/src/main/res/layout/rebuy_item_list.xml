@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingVertical="10dp">
+    <CheckBox
+        android:id="@+id/chk_ReSelect"
+        style="@style/CustomCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/imv_ReThumb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/location_icon"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_ReName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_ReCategory"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:text="Phân loại:"
+            android:textColor="#66000000"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/txt_RePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/round_border_2"
+                android:gravity="center"
+                android:paddingHorizontal="5dp"
+                android:text="48.000 đ"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_ReMinus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_minus"/>
+            <TextView
+                android:id="@+id/txt_ReNumber"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/btn_RePlus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background = "@drawable/ic_plus"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

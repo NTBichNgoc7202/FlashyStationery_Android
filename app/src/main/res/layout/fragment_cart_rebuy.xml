@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.race.fragment.CartRebuyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8F4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imv_ReEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/empty_view"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/txt_ReEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có sản phẩm nào"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#000000"/>
+        <ListView
+            android:id="@+id/lv_RebuyItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="30dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

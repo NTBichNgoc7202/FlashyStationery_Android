@@ -1,14 +1,11 @@
-package com.race.flashystationery;
+package com.race.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,10 +14,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.race.flashystationery.databinding.ActivityBlogBinding;
-import com.race.flashystationery.databinding.ActivityMainBinding;
+import com.race.flashystationery.AddressListActivity;
+import com.race.flashystationery.NotificationActivity;
+import com.race.flashystationery.OrderTrackingActivity;
+import com.race.flashystationery.R;
+import com.race.flashystationery.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
+
+    FragmentAccountBinding binding;
 
     public AccountFragment() {
         // Required empty public constructor
@@ -34,14 +36,40 @@ public class AccountFragment extends Fragment {
                 .setDisplayShowTitleEnabled(true);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.user_acc_title);
 
-
-
         setHasOptionsMenu(true);
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        binding = FragmentAccountBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
 
+        addEvents();
+
+        return view;
     }
+
+    private void addEvents() {
+        binding.llChoXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), OrderTrackingActivity.class));
+            }
+        });
+
+        binding.llFavoriteProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.llAddressList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AddressListActivity.class));
+            }
+        });
+    }
+
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
@@ -57,9 +85,14 @@ public class AccountFragment extends Fragment {
 
         } else if (item.getItemId() == R.id.mn_Notify){
             //Opening Notification Act
+            startActivity(new Intent(getActivity(), NotificationActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
