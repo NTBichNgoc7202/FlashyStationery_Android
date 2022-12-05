@@ -1,14 +1,23 @@
 package com.race.fragment;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -18,6 +27,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.race.adapters.ItemAdapter;
 import com.race.adapters.ItemModelAdapter;
+import com.race.flashystationery.AddressListActivity;
 import com.race.flashystationery.ProductActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCartFullBinding;
@@ -43,18 +53,65 @@ public class CartFullFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity) getActivity()).getSupportActionBar()
-                .setDisplayShowTitleEnabled(false);
-        setHasOptionsMenu(true);
 
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Giỏ hàng của tôi");
+
+        setHasOptionsMenu(true);
 
         binding = FragmentCartFullBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-//        addEvents();
+
 //        loadFullView();
         loadFullData();
         return view;
 
+    }
+
+    public void deleteItem() {
+//        binding.lvItem.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//        @Override
+//        public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//            builder.setTitle("Xác nhận xóa");
+//            builder.setIcon(android.R.drawable.ic_delete);
+//            builder.setMessage("Bạn có chắc muốn xóa sản phẩm?");
+//            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialogInterface, int i) {
+////                        fullItems.remove(i);
+////                        fullAdapter.notifyDataSetChanged();
+////                        binding.lvItem.invalidateViews();
+//                }
+//            });
+//            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialogInterface, int i) {
+//                    dialogInterface.dismiss();
+//                }
+//            });
+//            builder.show();
+//            return true;
+//        }
+//    });
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Xác nhận xóa");
+                builder.setIcon(android.R.drawable.ic_delete);
+                builder.setMessage("Bạn có chắc muốn xóa sản phẩm?");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Delete Item
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.show();
     }
 
 
@@ -104,11 +161,11 @@ public class CartFullFragment extends Fragment {
     private void loadFullData() {
         fullItems = new ArrayList<>();
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
+        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 96000));
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
+        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 96000));
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 48000));
+        fullItems.add(new Item(R.drawable.notebook, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "Kết thúc 31 thg 12 23:59:59", 96000));
 
         fullAdapter = new ItemAdapter(CartFullFragment.this, R.layout.cart_item_list, fullItems);
         binding.lvItem.setAdapter(fullAdapter);

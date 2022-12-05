@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.race.fragment.CartFullFragment;
@@ -60,6 +61,7 @@ public class ItemAdapter extends BaseAdapter {
             holder.btnPlus = view.findViewById(R.id.btn_Plus);
             holder.btnMinus = view.findViewById(R.id.btn_Minus);
             holder.chkSelect = view.findViewById(R.id.chk_Select);
+            holder.llItemClick = view.findViewById(R.id.ll_ItemClick);
 
             view.setClickable(true);
             view.setTag(holder);
@@ -93,12 +95,21 @@ public class ItemAdapter extends BaseAdapter {
                 fragment.createBottomSheetCategory(item);
             }
         });
+        holder.llItemClick.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                fragment.deleteItem();
+                return true;
+            }
+        });
             return view;
     }
+
     public static class ViewHolder {
         ImageView imvThumb;
         TextView txtName, txtCategory, txtDiscount, txtPrice, txtNumber;
         Button btnPlus, btnMinus;
         CheckBox chkSelect;
+        LinearLayout llItemClick;
     }
 }

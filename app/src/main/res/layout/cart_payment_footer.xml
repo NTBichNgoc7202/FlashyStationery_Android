@@ -4,25 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="end"
+    android:paddingBottom="5dp"
     android:paddingHorizontal="10dp"
     android:background="#F7F8F4"
     android:layout_alignParentBottom="true">
 
-    <CheckBox
-        android:id="@+id/chk_SelectAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tất cả"
-        android:textColor="#5d5c78"
-        android:textStyle="bold"
-        style="@style/CustomCheckbox"
-        android:textSize="15sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tổng cộng: "
         android:layout_marginStart="10dp"
         android:textSize="15sp"
+        android:layout_gravity="center"
         android:textColor="#000000"/>
     <TextView
         android:layout_width="wrap_content"
@@ -30,12 +23,14 @@
         android:text="100.000 đ"
         android:textSize="15sp"
         android:textColor="#5d5c78"
+        android:layout_gravity="center"
         android:textStyle="bold"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thanh toán"
         android:textAllCaps="false"
+        android:layout_gravity="center"
         android:textSize="15sp"
         android:textColor="#5d5c78"
         android:backgroundTint="#FBD3CA"
