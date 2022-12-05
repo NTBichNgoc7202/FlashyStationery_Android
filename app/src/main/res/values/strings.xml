@@ -16,6 +16,9 @@
     <string name="reply_comment">Cảm ơn lời đánh giá của bạn rất nhiều. Đây chính xác là món quà vô giá đối với Flashy. Flashy sẽ không ngừng cải thiện chất lượng để mang lại cho mọi người những dịch vụ tốt nhất!</string>
 
     <string name="user_acc_title">Hồ sơ người dùng</string>
+    <string name="registernow"><b><u>ĐĂNG KÝ NGAY</u></b></string>
+    <string name="loginnow"><b><u>ĐĂNG NHẬP NGAY</u></b></string>
+    <string name="otpverificationnow"><b><u>GỬI LẠI MÃ XÁC NHẬN</u></b></string>
 
     <string name="address_add_name">Tên người nhận <font color='#FF0000'>*</font></string>
     <string name="address_add_phone">Số điện thoại <font color='#FF0000'>*</font></string>
