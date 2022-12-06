@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashyStationery"
         tools:targetApi="31">
+        
         <activity
             android:name=".SettingActivity"
             android:exported="false">
@@ -20,6 +21,22 @@
                 android:value="" />
         </activity>
         
+        <activity
+            android:name=".OrderReturnActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".FavoriteProductActivity"
             android:exported="false">
