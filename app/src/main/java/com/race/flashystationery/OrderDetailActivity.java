@@ -66,7 +66,20 @@ public class OrderDetailActivity extends AppCompatActivity {
                 R.layout.order_detail_status_item_list, orderDetailStatuses);
         binding.lvOrderStatus.setAdapter(adapter);
 
-        addButtons();
+        addButtonContact();
+
+        Button btnCancelOrder = new Button(this);
+
+        btnCancelOrder.setText("Huỷ đơn");
+        customButton(btnCancelOrder);
+        binding.llButton.addView(btnCancelOrder);
+
+        btnCancelOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void loadTakingData() {
@@ -85,7 +98,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                 R.layout.order_detail_status_item_list, orderDetailStatuses);
         binding.lvOrderStatus.setAdapter(adapter);
 
-        addButtons();
+        addButtonContact();
     }
 
     private void loadDeliverData() {
@@ -107,7 +120,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                 R.layout.order_detail_status_item_list, orderDetailStatuses);
         binding.lvOrderStatus.setAdapter(adapter);
 
-        addButtons();
+        addButtonContact();
     }
 
     private void loadSuccessData() {
@@ -124,7 +137,24 @@ public class OrderDetailActivity extends AppCompatActivity {
                 R.layout.order_detail_status_item_list, orderDetailStatuses);
         binding.lvOrderStatus.setAdapter(adapter);
 
-        addButtonsSuccess();
+        addButtonContact();
+
+        Button btnRebuy = new Button(this);
+        Button btnReturn = new Button(this);
+
+        btnRebuy.setText("Mua lại");
+        customButton(btnRebuy);
+        binding.llButton.addView(btnRebuy);
+
+        btnReturn.setText("Trả hàng");
+        customButton(btnReturn);
+        binding.llButton.addView(btnReturn);
+        btnReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OrderDetailActivity.this,OrderReturnActivity.class));
+            }
+        });
 
     }
 
@@ -139,45 +169,26 @@ public class OrderDetailActivity extends AppCompatActivity {
         }
     }
 
-    private void addButtons(){
+    private void addButtonContact(){
         Button btnContact = new Button(this);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 
         btnContact.setText("Liên hệ");
-        customButton(btnContact,layoutParams);
-        binding.llButton.addView(btnContact);
-    }
-
-    private void addButtonsSuccess(){
-        Button btnContact = new Button(this);
-        Button btnRebuy = new Button(this);
-        Button btnReturn = new Button(this);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT,1f);
-        layoutParams.setMargins(10,0,10,5);
-
-        btnContact.setText("Liên hệ");
-        customButton(btnContact,layoutParams);
+        customButton(btnContact);
         binding.llButton.addView(btnContact);
 
-        btnRebuy.setText("Mua lại");
-        customButton(btnRebuy,layoutParams);
-        binding.llButton.addView(btnRebuy);
-
-        btnReturn.setText("Trả hàng");
-        customButton(btnReturn,layoutParams);
-        binding.llButton.addView(btnReturn);
-        btnReturn.setOnClickListener(new View.OnClickListener() {
+        btnContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OrderDetailActivity.this,OrderReturnActivity.class));
+
             }
         });
     }
 
-    private void customButton(Button button, LinearLayout.LayoutParams layoutParams) {
+    private void customButton(Button button) {
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,1f);
+        layoutParams.setMargins(10,10,10,5);
         button.setTextSize(20);
         button.setAllCaps(false);
         button.setTypeface(null, Typeface.BOLD);
