@@ -4,9 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.race.fragments.OrderCancelFragment;
 import com.race.fragments.OrderNotReviewFragment;
-import com.race.fragments.OrderRefundFragment;
 import com.race.fragments.OrderReviewedFragment;
 
 public class OrderReviewViewPagerAdapter extends FragmentStateAdapter {
