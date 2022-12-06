@@ -15,9 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.race.flashystationery.AddressListActivity;
+import com.race.flashystationery.FavoriteProductActivity;
 import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.OrderTrackingActivity;
 import com.race.flashystationery.R;
+import com.race.flashystationery.SetUpAccountActivity;
 import com.race.flashystationery.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -48,6 +50,9 @@ public class AccountFragment extends Fragment {
     }
 
     private void addEvents() {
+        binding.txtUserFullName.setText("Nguyễn Trần Bích Ngọc");
+        binding.imvUserAvatar.setImageResource(R.drawable.chibi_cute);
+
         binding.llChoXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +99,13 @@ public class AccountFragment extends Fragment {
         binding.llFavoriteProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getActivity(), FavoriteProductActivity.class));
+            }
+        });
+
+        binding.llAccountSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
             }
         });
@@ -104,8 +116,21 @@ public class AccountFragment extends Fragment {
                 startActivity(new Intent(getActivity(), AddressListActivity.class));
             }
         });
-    }
 
+        binding.llPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        binding.llSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {

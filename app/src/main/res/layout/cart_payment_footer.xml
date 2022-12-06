@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="100.000 đ"
+        android:text="144000.0 đ"
         android:textSize="15sp"
         android:textColor="#5d5c78"
         android:layout_gravity="center"
