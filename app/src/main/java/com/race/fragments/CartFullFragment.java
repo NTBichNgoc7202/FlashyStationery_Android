@@ -130,11 +130,11 @@ public class CartFullFragment extends Fragment {
     private void loadFullData() {
         fullItems = new ArrayList<>();
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "SALE: kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", null, 96000));
+        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ kế hoạch lò xo kép A5 Study Planner 160 trang", "Phân loại: hồng", null, 96000));
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "SALE: kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", null, 96000));
+        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ kế hoạch lò xo kép A5 Study Planner 160 trang", "Phân loại: hồng", null, 96000));
         fullItems.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "SALE: kết thúc 31 thg 12 23:59:59", 48000));
-        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", null, 96000));
+        fullItems.add(new Item(R.drawable.notebook4, "2", "Sổ kế hoạch lò xo kép A5 Study Planner 160 trang", "Phân loại: hồng", null, 96000));
 
         fullAdapter = new ItemAdapter(CartFullFragment.this, R.layout.cart_item_list, fullItems);
         binding.lvItem.setAdapter(fullAdapter);
