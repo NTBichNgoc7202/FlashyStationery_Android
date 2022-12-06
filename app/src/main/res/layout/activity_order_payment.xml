@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OrderPaymentActivity"
-    android:scrollbars="vertical"
     android:overScrollMode="always"
-    android:scrollIndicators="right">
+    android:scrollIndicators="right"
+    android:scrollbars="vertical"
+    tools:context=".OrderPaymentActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:layout_marginBottom="40dp">
+        android:layout_marginBottom="40dp"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,11 +114,10 @@
                 android:id="@+id/lv_OrderPaymentItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginVertical="10dp"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="30dp"
-                android:paddingBottom="10dp"
-                android:scrollbars="none" />
+                android:paddingBottom="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -138,7 +137,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_ShipperView"
+                    android:id="@+id/txt_ShipmentView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -216,32 +215,49 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Chọn phương thức thanh toán"
+                    android:text="Phương thức thanh toán"
                     android:textColor="#000000"
                     android:textSize="19sp"
                     android:textStyle="bold" />
-                <!--        <TextView-->
-                <!--            android:id="@+id/txt_PaymentView"-->
-                <!--            android:layout_width="match_parent"-->
-                <!--            android:layout_height="wrap_content"-->
-                <!--            android:layout_weight="1"-->
-                <!--            android:text="Xem tất cả >"-->
-                <!--            android:textColor="#5d5c78"-->
-                <!--            android:gravity="end"-->
-                <!--            android:layout_gravity="center"/>-->
+                <TextView
+                    android:id="@+id/txt_PaymentMethodView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="end"
+                    android:text="Xem tất cả >"
+                    android:textColor="#5d5c78" />
             </LinearLayout>
 
-            <GridView
-                android:id="@+id/gv_PaymentMethod"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:columnWidth="200dp"
-                android:horizontalSpacing="10dp"
-                android:numColumns="4"
-                android:scrollbarAlwaysDrawHorizontalTrack="true"
-                android:scrollbars="horizontal"
-                android:stretchMode="none" />
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="840dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp">
+
+                        <GridView
+                            android:id="@+id/gv_PaymentMethod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="200dp"
+                            android:horizontalSpacing="10dp"
+                            android:numColumns="6"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:scrollbars="horizontal"
+                            android:listSelector="@android:color/holo_orange_light"
+                            android:stretchMode="none" />
+                    </LinearLayout>
+                </FrameLayout>
+            </HorizontalScrollView>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -316,7 +332,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="end"
-                        android:text="16.000đ"
+                        android:text="16000.0đ"
                         android:textColor="#000000"
                         android:textSize="15sp"
                         android:textStyle="bold" />
