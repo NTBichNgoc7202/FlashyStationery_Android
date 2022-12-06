@@ -1,13 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".OrderTrackingActivity"
-    android:orientation="vertical"
     android:background="@color/cultured">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_margin="10dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/address_home_background">
+                <ImageView
+                    android:id="@+id/imv_check"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_round_check"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/imv_check"
+                    app:layout_constraintTop_toTopOf="@id/imv_check"
+                    app:layout_constraintBottom_toBottomOf="@id/imv_check"
+                    android:layout_marginStart="10dp"
+                    android:text="Đã huỷ đơn"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_coral"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/imv_check"
+                    app:layout_constraintTop_toBottomOf="@id/imv_check"
+                    android:layout_marginStart="10dp"
+                    android:text="Yêu cầu hủy đơn thành công"
+                    android:textColor="#858585"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imv_check"
+                    app:layout_constraintBottom_toBottomOf="@id/imv_check"
+                    android:layout_margin="10dp"
+                    android:text="Không được hoàn tiền"
+                    android:textColor="@color/black_coral"
+                    android:textSize="16sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/notebook"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/black_coral"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chưa thanh toán: không hoàn tiền"
+                        android:textColor="@color/black_coral"
+                        android:layout_marginTop="5dp"/>
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="28dp"
+                        android:text="Chi tiết"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:background="@drawable/address_home_background"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
 
-</LinearLayout>
+            </LinearLayout>
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

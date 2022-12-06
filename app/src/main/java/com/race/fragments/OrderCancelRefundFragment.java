@@ -56,4 +56,10 @@ public class OrderCancelRefundFragment extends Fragment {
             }
         }).attach();
     }
+
+    @Override
+    public void onResume() {
+        cancelRefundViewPager.setCurrentItem(0);
+        super.onResume();
+    }
 }
