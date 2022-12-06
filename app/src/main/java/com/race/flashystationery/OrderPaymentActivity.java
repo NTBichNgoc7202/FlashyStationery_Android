@@ -51,5 +51,6 @@ public class OrderPaymentActivity extends AppCompatActivity {
 
         orderAdapter =  new ItemOrderAdapter(OrderPaymentActivity.this, R.layout.order_payment_item_list, items);
         binding.lvOrderPaymentItem.setAdapter(orderAdapter);
+        binding.lvOrderPaymentItem.setExpanded(true);
     }
 }
