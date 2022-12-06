@@ -1,8 +1,10 @@
 package com.race.flashystationery;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -170,6 +172,16 @@ public class NoteBookActivity extends AppCompatActivity {
                 R.layout.notebook_item_list, itemNoteBookArrayList);
         binding.gvNoteBook.setAdapter(itemNoteBookAdapter);
         //binding.txtProductType.setText("FILES");
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }
