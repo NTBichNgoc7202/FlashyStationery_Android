@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OrderPaymentActivity">
+    tools:context=".OrderPaymentActivity"
+    android:scrollbars="vertical"
+    android:overScrollMode="always"
+    android:scrollIndicators="right">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:layout_marginBottom="40dp">
 
@@ -111,7 +114,11 @@
                 android:id="@+id/lv_OrderPaymentItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="30dp"
+                android:paddingBottom="10dp"
+                android:scrollbars="none" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="end"
                     android:text="Xem tất cả >"
                     android:textColor="#5d5c78" />
