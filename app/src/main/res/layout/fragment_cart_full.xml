@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <include
-        android:id="@+id/include_Footer"
+        android:id="@+id/include_CartFooter"
         layout="@layout/cart_payment_footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

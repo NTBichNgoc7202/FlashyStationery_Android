@@ -1,15 +1,22 @@
 package com.race.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.race.adapters.RebuyItemAdapter;
+import com.race.flashystationery.AddressListActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCartRebuyBinding;
 import com.race.models.RebuyItem;
@@ -24,8 +31,9 @@ public class CartRebuyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity) getActivity()).getSupportActionBar()
-                .setDisplayShowTitleEnabled(false);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Giỏ hàng của tôi");
+
         setHasOptionsMenu(true);
 
         binding = FragmentCartRebuyBinding.inflate(inflater, container, false);

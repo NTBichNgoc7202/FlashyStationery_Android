@@ -1,5 +1,6 @@
 package com.race.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,9 +15,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.race.adapters.CartTabViewAdapter;
+import com.race.flashystationery.AddressListActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCartBinding;
 
@@ -99,10 +104,18 @@ public class CartFragment extends Fragment {
 
 
     @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu,@NonNull MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         ((AppCompatActivity) getActivity()).getMenuInflater().inflate(R.menu.cart_menu, menu);
-        MenuItem menuAddress = menu.findItem(R.id.mn_Address);
-        MenuItemCompat.setActionView(menuAddress, R.layout.cart_menu_layout);
+//        MenuItem menuAddress = menu.findItem(R.id.mn_Address);
+//        MenuItemCompat.setActionView(menuAddress, R.layout.cart_menu_layout);
         super.onCreateOptionsMenu(menu, inflater);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.mn_Address) {
+            Intent intent = new Intent(getActivity(), AddressListActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

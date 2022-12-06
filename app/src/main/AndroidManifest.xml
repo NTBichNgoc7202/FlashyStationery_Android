@@ -12,9 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashyStationery"
         tools:targetApi="31">
-
+        
         <activity
-            android:name=".SetUpAccountActivity"
+            android:name=".SettingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        
+        <activity
+            android:name=".OrderReturnActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -22,13 +30,42 @@
         </activity>
 
         <activity
-            android:name=".OnboardingActivity"
+            android:name=".OrderDetailActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
 
+        <activity
+            android:name=".FavoriteProductActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        
+        <activity
+            android:name=".OrderPaymentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SetUpAccountActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -42,7 +79,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".LoginRegisterActivity"
             android:exported="false">
@@ -50,7 +86,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false">
@@ -58,7 +93,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".RegisterActivity"
             android:exported="true">
@@ -66,16 +100,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".OTPVerification"
             android:exported="true">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".NotificationActivity"
             android:exported="false">
@@ -83,7 +114,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ProductActivity"
             android:exported="false">
@@ -91,7 +121,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".NoteBookActivity"
             android:exported="true">
@@ -99,7 +128,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".CartActivity"
             android:exported="true">
@@ -107,7 +135,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".OrderTrackingActivity"
             android:exported="false">
@@ -115,7 +142,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AddressListActivity"
             android:exported="false">
@@ -123,7 +149,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AddAddressActivity"
             android:exported="false">
@@ -132,4 +157,5 @@
                 android:value="" />
         </activity>
     </application>
+
 </manifest>

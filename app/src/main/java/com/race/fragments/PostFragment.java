@@ -2,25 +2,36 @@ package com.race.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.race.flashystationery.R;
+import com.race.flashystationery.databinding.FragmentPostBinding;
 
 
 public class PostFragment extends Fragment {
 
-    public PostFragment() {
-        // Required empty public constructor
-    }
+    FragmentPostBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_post, container, false);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Bảng tin FLASHY");
+
+        binding = FragmentPostBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }
