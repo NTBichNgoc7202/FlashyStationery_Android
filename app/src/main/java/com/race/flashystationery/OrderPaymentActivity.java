@@ -205,7 +205,7 @@ public class OrderPaymentActivity extends AppCompatActivity {
     public void loadItemData() {
         items = new ArrayList<>();
         items.add(new Item(R.drawable.notebook, "1", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", "SALE: kết thúc 31 thg 12 23:59:59", 48000));
-        items.add(new Item(R.drawable.notebook4, "2", "Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ", "Phân loại: 100 trang, Mẫu: 05", null, 96000));
+        items.add(new Item(R.drawable.notebook4, "2", "Sổ kế hoạch lò xo kép A5 Study Planner 160 trang", "Phân loại: hồng", null, 96000));
 
         orderAdapter = new ItemOrderAdapter(OrderPaymentActivity.this, R.layout.order_payment_item_list, items);
         binding.lvOrderPaymentItem.setAdapter(orderAdapter);
