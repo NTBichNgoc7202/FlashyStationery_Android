@@ -3,22 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffff"
-    android:orientation="horizontal"
-    android:id="@+id/ll_ItemClick">
+    android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/chk_Select"
-        style="@style/CustomCheckbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp"/>
 
     <ImageView
-        android:id="@+id/imv_ItemThumb"
+        android:id="@+id/imv_OrderThumb"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
+        android:layout_marginVertical="10dp"
         android:src="@drawable/location_icon"
         android:layout_gravity="center"/>
 
@@ -30,7 +23,7 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/txt_ItemName"
+            android:id="@+id/txt_OrderName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
@@ -38,75 +31,54 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txt_ItemCategory"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/long_round_textbox"
-            android:gravity="center_vertical"
-            android:paddingStart="5dp"
-            android:text="Phân loại:"
-            android:textColor="#66000000"
-            android:textSize="12sp" />
-
-        <LinearLayout
+            android:id="@+id/txt_OrderCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="horizontal">
+            android:layout_marginVertical="5dp"
+            android:gravity="center_vertical"
+            android:text="Phân loại:"
+            android:textColor="#66000000"
+            android:textSize="10sp" />
+
+
 
             <TextView
-                android:id="@+id/txt_ItemDiscount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/txt_OrderDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="SALE: kết thúc 31 thg 12 23:59:59"
-                android:paddingHorizontal="5dp"
-                android:textColor="#5d5c78"
                 android:textSize="10sp" />
-        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="5dp"
             android:gravity="start">
 
             <TextView
-                android:id="@+id/txt_ItemPrice"
+                android:id="@+id/txt_OrderPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="30dp"
-                android:background="@drawable/round_border_2"
                 android:gravity="center"
-                android:paddingHorizontal="5dp"
+
                 android:text="48.000 đ"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-            <Button
-                android:id="@+id/btn_Minus"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/ic_minus"/>
             <TextView
-                android:id="@+id/txt_ItemNumber"
-                android:layout_width="20dp"
+                android:id="@+id/txt_OrderNumber"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="Số lượng: 1"
                 android:layout_gravity="center"
-                android:gravity="center"
+                android:gravity="end"
                 android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="15sp"/>
-            <Button
-                android:id="@+id/btn_Plus"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background = "@drawable/ic_plus"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
