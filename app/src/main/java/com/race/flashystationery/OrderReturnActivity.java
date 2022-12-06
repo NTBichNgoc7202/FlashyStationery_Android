@@ -6,21 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.race.flashystationery.databinding.ActivityFavoriteProductBinding;
+import com.race.flashystationery.databinding.ActivityOrderReturnBinding;
 
-public class FavoriteProductActivity extends AppCompatActivity {
+public class OrderReturnActivity extends AppCompatActivity {
 
-    ActivityFavoriteProductBinding binding;
+    ActivityOrderReturnBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_favorite_product);
+//        setContentView(R.layout.activity_order_return);
 
-        binding = ActivityFavoriteProductBinding.inflate(getLayoutInflater());
+        binding = ActivityOrderReturnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getSupportActionBar().setTitle("Sản phẩm yêu thích");
+        getSupportActionBar().setTitle("Trả hàng");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
