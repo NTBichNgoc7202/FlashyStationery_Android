@@ -1,5 +1,6 @@
 package com.race.flashystationery;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,13 +20,22 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.race.flashystationery.databinding.ActivityRegisterBinding;
+
 public class RegisterActivity extends AppCompatActivity {
-//    TextView txtRegisterNow;
+    ActivityRegisterBinding binding;
+    RegisterDatabaseHelper dB = SetUpAccountActivity.dB;
+
+
+    TextView txtRegisterNow;
     private boolean passwordShowing = false;
     private boolean confirmPasswordShowing = false;
     private ProgressBar progressBar;
     private RadioGroup radioGroupRegisterGender;
     private RadioButton radioButtonRegisterGenderSelected;
+    private Button btnSignUp;
+    private RegisterDatabaseHelper myDB;
+    private EditText edtInputEmail, edtInputAccounName, edtInputPassword, edtInputPhoneNumber;
 
 
 
@@ -34,7 +45,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        getSupportActionBar().setTitle("Register");
+        binding = ActivityRegisterBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        getSupportActionBar().setTitle("Thiết lập tài khoản");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        addEvent();
+
+        edtInputEmail = findViewById(R.id.edt_InputEmail);
+        edtInputAccounName = findViewById(R.id.edt_InputAccountName);
+        edtInputPassword = findViewById(R.id.edt_InputPassword);
+        edtInputPhoneNumber = findViewById(R.id.edt_InputPhoneNumber);
+        btnSignUp = findViewById(R.id.btn_SignUp);
+        myDB = new RegisterDatabaseHelper(this);
+        insertUser();
+
 
         Toast.makeText(RegisterActivity.this, "Bạn có thể đăng ký ngay bây giờ", Toast.LENGTH_LONG).show();
 
@@ -176,7 +202,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     textGender = radioButtonRegisterGenderSelected.getText().toString();
                     progressBar.setVisibility(View.VISIBLE);
-                    registerUser(textFullName, textPhoneNumber, textEmail, textDOB, textGender, textPassword);
+//                    registerUser(textFullName, textPhoneNumber, textEmail, textDOB, textGender, textPassword);
 
                 }
 
@@ -208,15 +234,60 @@ public class RegisterActivity extends AppCompatActivity {
 
 //        txtRegisterNow = findViewById(R.id.txt_LoginNow);
 //
-//        txtRegisterNow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-//            }
-//        });
+        txtRegisterNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
     }
-//Register User using the credentials given
-    private void registerUser(String textFullName, String textPhoneNumber, String textEmail, String textDOB, String textGender, String textPassword) {
+
+    private void addEvent() {
+        binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dB.execSql("INSERT INTO " + RegisterDatabaseHelper.TABLE_NAME + " VALUES(null, '"
+                        + binding.edtInputAccountName.getText().toString() + "', '"
+                        + binding.edtInputPhoneNumber.getText().toString() + "', '"
+                        + binding.edtInputEmail.getText().toString() + "', '"
+                        + binding.edtInputDOB.getText().toString() + "', '"
+                        + binding.edtInputPassword.getText().toString());
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+//    //Register User using the credentials given
+//    private void registerUser(String textFullName, String textPhoneNumber, String textEmail, String textDOB, String textGender, String textPassword) {
+//    }
+//
+    private  void insertUser(){
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean var = myDB.registerUserFlashyApp(edtInputAccounName.getText().toString(), edtInputEmail.getText().toString(), edtInputPhoneNumber.getText().toString(), edtInputPassword.getText().toString());
+                if(var){
+                    Toast.makeText(RegisterActivity.this, "Chúc mừng bạn đã đăng ký thành công ||", Toast.LENGTH_SHORT).show();
+
+                }
+                else
+                    Toast.makeText(RegisterActivity.this, "Đăng ký thất bại ||", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
     }
 
 
