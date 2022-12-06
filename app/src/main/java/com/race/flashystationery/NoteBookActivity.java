@@ -28,6 +28,9 @@ public class NoteBookActivity extends AppCompatActivity {
         binding = ActivityNoteBookBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        getSupportActionBar().setTitle("SỔ");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         String extraInfor = getIntent().getStringExtra("noteList");
         if (extraInfor.equals("notebook")){
             loadNoteBook();
@@ -40,6 +43,8 @@ public class NoteBookActivity extends AppCompatActivity {
         }
     }
     private void loadNoteBook() {
+        getSupportActionBar().setTitle("SỔ");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         itemNoteBookArrayList = new ArrayList<>();
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.planneritem,
                 "Sổ kế hoạch lò xo kép Study Planner B5 160 trang",
@@ -63,7 +68,7 @@ public class NoteBookActivity extends AppCompatActivity {
                 "Sổ lò xo kép Dot Grid B5 200 trang",
                 49000.0));
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.sovecaocap40to,
-                "Sổ vẽ lò xo đa năng Creative Art A5 - 150 GSM - 40 tờ",
+                "Sổ vẽ lò xo đa năng Creative Art A5 40 tờ",
                 50000.0));
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.ruotsocongdot100to,
                 "Ruột sổ còng Dot Grid B5 120/76 - 100 tờ",
@@ -74,10 +79,12 @@ public class NoteBookActivity extends AppCompatActivity {
 
         itemNoteBookAdapter = new ItemNoteBookAdapter(NoteBookActivity.this,
                 R.layout.notebook_item_list, itemNoteBookArrayList);
-        binding.lvNoteBook.setAdapter(itemNoteBookAdapter);
-        binding.txtProductType.setText("SỔ");
+        binding.gvNoteBook.setAdapter(itemNoteBookAdapter);
+        ////binding.txtProductType.setText("SỔ");
     }
     private void loadBook() {
+        getSupportActionBar().setTitle("VỞ");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         itemNoteBookArrayList = new ArrayList<>();
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.book1,
                 "Vở kẻ ngang Click cỡ A4 260 trang",
@@ -105,11 +112,13 @@ public class NoteBookActivity extends AppCompatActivity {
                 26000.0));
         itemNoteBookAdapter = new ItemNoteBookAdapter(NoteBookActivity.this,
                 R.layout.notebook_item_list, itemNoteBookArrayList);
-        binding.lvNoteBook.setAdapter(itemNoteBookAdapter);
-        binding.txtProductType.setText("VỞ");
+        binding.gvNoteBook.setAdapter(itemNoteBookAdapter);
+        //binding.txtProductType.setText("VỞ");
     }
 
     private void loadLearingTool() {
+        getSupportActionBar().setTitle("DỤNG CỤ HỌC TẬP");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         itemNoteBookArrayList = new ArrayList<>();
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.butmura,
                 "Bút bi gel Mura ngòi 0.5mm",
@@ -134,10 +143,12 @@ public class NoteBookActivity extends AppCompatActivity {
                 8000.0));
         itemNoteBookAdapter = new ItemNoteBookAdapter(NoteBookActivity.this,
                 R.layout.notebook_item_list, itemNoteBookArrayList);
-        binding.lvNoteBook.setAdapter(itemNoteBookAdapter);
-        binding.txtProductType.setText("DỤNG CỤ HỌC TẬP");
+        binding.gvNoteBook.setAdapter(itemNoteBookAdapter);
+        //binding.txtProductType.setText("DỤNG CỤ HỌC TẬP");
     }
     private void loadFiles() {
+        getSupportActionBar().setTitle("FILES");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         itemNoteBookArrayList = new ArrayList<>();
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.filecongsata5,
                 "Binder File còng sắt A5",
@@ -157,8 +168,8 @@ public class NoteBookActivity extends AppCompatActivity {
 
         itemNoteBookAdapter = new ItemNoteBookAdapter(NoteBookActivity.this,
                 R.layout.notebook_item_list, itemNoteBookArrayList);
-        binding.lvNoteBook.setAdapter(itemNoteBookAdapter);
-        binding.txtProductType.setText("FILES");
+        binding.gvNoteBook.setAdapter(itemNoteBookAdapter);
+        //binding.txtProductType.setText("FILES");
     }
 
 }
