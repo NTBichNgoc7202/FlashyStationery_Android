@@ -43,17 +43,23 @@ public class OrderReviewFragment extends Fragment {
 
         new TabLayoutMediator(reviewTabLayout, reviewViewPager,
                 new TabLayoutMediator.TabConfigurationStrategy(){
-                    @Override
-                    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                        switch (position) {
-                            case 0:
-                                tab.setText("Chưa đánh giá");
-                                break;
-                            case 1:
-                                tab.setText("Đã đánh giá");
-                                break;
-                        }
-                    }
-                }).attach();
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                switch (position) {
+                    case 0:
+                        tab.setText("Chưa đánh giá");
+                        break;
+                    case 1:
+                        tab.setText("Đã đánh giá");
+                        break;
+                }
+            }
+        }).attach();
+    }
+
+    @Override
+    public void onResume() {
+        reviewViewPager.setCurrentItem(0);
+        super.onResume();
     }
 }
