@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.race.flashystationery.databinding.ActivityMainBinding;
+import com.race.fragments.HomeFragment;
 import com.race.fragments.AccountFragment;
 import com.race.fragments.CartFragment;
 import com.race.fragments.PostFragment;
