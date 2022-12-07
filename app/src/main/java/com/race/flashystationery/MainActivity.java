@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new com.race.fragment.HomeFragment());
+        replaceFragment(new HomeFragment());
 
         preferences = getSharedPreferences("com.race.myAppName",MODE_PRIVATE);
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomnavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.home:
-                    replaceFragment(new com.race.fragment.HomeFragment());
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.post:
                     replaceFragment(new PostFragment());

@@ -39,14 +39,6 @@
         </activity>
         
         <activity
-            android:name=".SettingLanguageFragment"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        
-        <activity
             android:name=".FavoriteProductActivity"
             android:exported="false">
             <meta-data
