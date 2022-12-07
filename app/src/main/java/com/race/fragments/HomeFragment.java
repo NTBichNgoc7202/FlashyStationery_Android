@@ -14,9 +14,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.SearchView;
 
 import com.race.flashystationery.NotificationActivity;
+import com.race.flashystationery.ProductActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentHomeBinding;
 
@@ -33,16 +35,30 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-
+        ((AppCompatActivity) getActivity()).getSupportActionBar()
+                        .setDisplayShowTitleEnabled(false);
         setHasOptionsMenu(true);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
+        addEvents();
 
-        return view;
+
+        return inflater.inflate(R.layout.fragment_home, container, false);
+
+
 
     }
+
+    private void addEvents() {
+        binding.gvSuggestProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(getActivity(), ProductActivity.class));
+            }
+        });
+    }
+
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
@@ -59,11 +75,8 @@ public class HomeFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.app_Bar_Search){
-
-        } else if (item.getItemId() == R.id.app_Bar_Notify){
+        if (item.getItemId() == R.id.app_Bar_Notify)
             startActivity(new Intent(getActivity(), NotificationActivity.class));
-        }
         return super.onOptionsItemSelected(item);
     }
 }

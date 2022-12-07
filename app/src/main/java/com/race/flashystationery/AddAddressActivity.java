@@ -53,7 +53,6 @@ public class AddAddressActivity extends AppCompatActivity {
                         + addressType + "', '"
                         + defaultAddress + "')");
                 finish();
-
             }
         });
 

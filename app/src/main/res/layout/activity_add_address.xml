@@ -38,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_bg"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:maxLength="10"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -83,14 +84,16 @@
                 android:layout_height="wrap_content"
                 android:text="Nhà"
                 android:textSize="18sp"
-                android:layout_marginStart="20dp" />
+                android:layout_marginStart="20dp"
+                style="@style/CustomRadiobutton"/>
             <RadioButton
                 android:id="@+id/rad_OfficeAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Văn phòng"
                 android:layout_marginStart="70dp"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                style="@style/CustomRadiobutton"/>
         </RadioGroup>
 
         <CheckBox

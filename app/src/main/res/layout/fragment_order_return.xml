@@ -12,25 +12,26 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
             android:src="@drawable/no_order_return"
             android:layout_marginVertical="25dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oops!"
-            android:textSize="30sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bạn chưa có đơn Trả hàng/Hoàn tiền nào cả"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"/>
         <Button
+            android:id="@+id/btn_ContShopping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tiếp tục mua sắm"
