@@ -48,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Tạo tài khoản");
         Toast.makeText(RegisterActivity.this, "Bạn có thể tạo tài khoản ngay bây giờ", Toast.LENGTH_SHORT).show();
 
+        progressBar = findViewById(R.id.processBar);
         edtInputFullName = findViewById(R.id.edt_InputAccountName);
         edtInputPhoneNumber = findViewById(R.id.edt_InputPhoneNumber);
         edtInputEmail = findViewById(R.id.edt_InputEmail);
@@ -63,6 +64,8 @@ public class RegisterActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
 
                 int selectedGenderId = radioGroupRegisterGender.getCheckedRadioButtonId();
                 radioButtonRegisterGenderSelected = findViewById(selectedGenderId);
@@ -137,28 +140,28 @@ public class RegisterActivity extends AppCompatActivity {
     }
     //Register User using the credentials given
     private void RegisterUser(String textFullName, String textPhoneNumber, String textEmail, String textDOB, String textGender, String textPassword) {
-    FirebaseAuth auth = FirebaseAuth.getInstance();
-    auth.createUserWithEmailAndPassword(textEmail, textPassword).addOnCompleteListener(RegisterActivity.this,
-            new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thành công", Toast.LENGTH_LONG).show();
-                    FirebaseUser firebaseUser = auth.getCurrentUser();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.createUserWithEmailAndPassword(textEmail, textPassword).addOnCompleteListener(RegisterActivity.this,
+                new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thành công", Toast.LENGTH_LONG).show();
+                        FirebaseUser firebaseUser = auth.getCurrentUser();
 
-                    //Send Verification Email
-                    firebaseUser.sendEmailVerification();
+                        //Send Verification Email
+                        firebaseUser.sendEmailVerification();
 
-                    //Open User profile after successful registation
-                    Intent intent = new Intent(RegisterActivity.this, SetUpAccountActivity.class);
-                    //To Prevent User from returning back to Register Activity on pressing back button after registration
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                    finish();
-                    //to close Register  Activity
+                        //Open User profile after successful registation
+                        Intent intent = new Intent(RegisterActivity.this, SetUpAccountActivity.class);
+                        //To Prevent User from returning back to Register Activity on pressing back button after registration
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        finish();
+                        //to close Register  Activity
 
 
-                }
-            });
+                    }
+                });
 
     }
 
