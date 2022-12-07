@@ -1,5 +1,6 @@
 package com.race.fragment;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 
@@ -16,10 +17,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.SearchView;
 import android.widget.Toolbar;
 
+import com.race.flashystationery.ProductActivity;
 import com.race.flashystationery.R;
+import com.race.flashystationery.databinding.FragmentAccountBinding;
 import com.race.flashystationery.databinding.FragmentHomeBinding;
 
 
@@ -39,10 +43,26 @@ public class HomeFragment extends Fragment {
                         .setDisplayShowTitleEnabled(false);
         setHasOptionsMenu(true);
 
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        addEvents();
+
+
         return inflater.inflate(R.layout.fragment_home, container, false);
 
 
+
     }
+
+    private void addEvents() {
+        binding.gvSuggestProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(getActivity(), ProductActivity.class));
+            }
+        });
+    }
+
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {

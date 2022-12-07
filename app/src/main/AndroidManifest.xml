@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashyStationery"
         tools:targetApi="31">
-        
+        <activity
+            android:name=".EmailSupportActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CustomerSupport"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".OnboardingActivity"
             android:exported="true">
@@ -20,7 +35,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -34,7 +48,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".LoginRegisterActivity"
             android:exported="false">
@@ -42,7 +55,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".LoginActivity"
             android:exported="false">
@@ -50,7 +62,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".RegisterActivity"
             android:exported="true">
@@ -58,16 +69,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".OTPVerification"
             android:exported="true">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".NotificationActivity"
             android:exported="false">
@@ -75,7 +83,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".ProductActivity"
             android:exported="false">
@@ -83,7 +90,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".NoteBookActivity"
             android:exported="true">
@@ -91,7 +97,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".CartActivity"
             android:exported="true">
@@ -99,7 +104,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".OrderTrackingActivity"
             android:exported="false">
@@ -107,7 +111,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".AddressListActivity"
             android:exported="false">
@@ -115,7 +118,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        
         <activity
             android:name=".AddAddressActivity"
             android:exported="false">
@@ -124,4 +126,5 @@
                 android:value="" />
         </activity>
     </application>
+
 </manifest>

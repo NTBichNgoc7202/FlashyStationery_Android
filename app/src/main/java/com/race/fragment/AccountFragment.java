@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.race.adapters.OrderTrackingViewPagerAdapter;
 import com.race.flashystationery.AddressListActivity;
+import com.race.flashystationery.CustomerSupport;
 import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.OrderTrackingActivity;
 import com.race.flashystationery.R;
@@ -105,6 +106,13 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), AddressListActivity.class));
+            }
+        });
+
+        binding.llSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), CustomerSupport.class));
             }
         });
     }
