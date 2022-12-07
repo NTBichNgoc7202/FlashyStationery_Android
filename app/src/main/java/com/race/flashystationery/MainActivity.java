@@ -10,9 +10,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.race.flashystationery.databinding.ActivityMainBinding;
+import com.race.fragments.HomeFragment;
 import com.race.fragments.AccountFragment;
 import com.race.fragments.CartFragment;
-import com.race.fragments.HomeFragment;
 import com.race.fragments.PostFragment;
 
 public class MainActivity extends AppCompatActivity {
