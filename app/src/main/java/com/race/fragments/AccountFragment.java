@@ -19,6 +19,7 @@ import com.race.flashystationery.FavoriteProductActivity;
 import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.OrderTrackingActivity;
 import com.race.flashystationery.R;
+import com.race.flashystationery.SetUpAccountActivity;
 import com.race.flashystationery.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -49,6 +50,9 @@ public class AccountFragment extends Fragment {
     }
 
     private void addEvents() {
+        binding.txtUserFullName.setText("Nguyễn Trần Bích Ngọc");
+        binding.imvUserAvatar.setImageResource(R.drawable.chibi_cute);
+
         binding.llChoXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
