@@ -2,11 +2,10 @@ package com.race.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.race.fragment.OrderCancelFragment;
-import com.race.fragment.OrderRefundFragment;
+import com.race.fragments.OrderCancelFragment;
+import com.race.fragments.OrderReturnFragment;
 
 public class OrderCancelRefundViewPagerAdapter extends FragmentStateAdapter {
     public OrderCancelRefundViewPagerAdapter(@NonNull Fragment fragment) {
@@ -20,7 +19,7 @@ public class OrderCancelRefundViewPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new OrderCancelFragment();
             case 1:
-                return new OrderRefundFragment();
+                return new OrderReturnFragment();
             default:
                 return new OrderCancelFragment();
         }

@@ -134,14 +134,10 @@ public class OTPVerification extends AppCompatActivity {
    private final TextWatcher textWatcher = new TextWatcher() {
        @Override
        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
        }
-
        @Override
        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
        }
-
        @Override
        public void afterTextChanged(Editable editable) {
            if(editable.length()>0){
@@ -163,11 +159,7 @@ public class OTPVerification extends AppCompatActivity {
        }
    };
 
-
-
-
     public boolean onKeyUp(int keyCode, KeyEvent event) {
-
         if (keyCode == KeyEvent.KEYCODE_DEL){
             if(selectedETPosition == 3){
                 selectedETPosition = 2;
@@ -185,7 +177,6 @@ public class OTPVerification extends AppCompatActivity {
         }
         else {
             return super.onKeyUp(keyCode, event);
-
         }
     }
 }

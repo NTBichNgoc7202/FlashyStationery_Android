@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.race.fragment.CartFullFragment">
+    tools:context="com.race.fragments.CartFullFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <include
-        android:id="@+id/include_Footer"
+        android:id="@+id/include_CartFooter"
         layout="@layout/cart_payment_footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

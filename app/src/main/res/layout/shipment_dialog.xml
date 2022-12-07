@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tùy chọn giao hàng"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GH tiêu chuẩn"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="17sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhận vào: 18-21 thg 11"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="16.000đ"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:layout_weight="2"/>
+        <RadioButton
+            android:id="@+id/rad_Standard"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            style="@drawable/radiobutton_selector"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginVertical="10dp"
+        android:src="#80D3D3D3" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GH hỏa tốc"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="17sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(Khu vực TP.HCM)"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#80000000"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhận vào: 17 thg 11"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="37.000đ"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:layout_weight="2"/>
+        <RadioButton
+            android:id="@+id/rad_Fast"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            style="@drawable/radiobutton_selector"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginVertical="10dp"
+        android:src="#80D3D3D3" />
+
+    <Button
+        android:id="@+id/btn_ConfirmShip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_border_1"
+        android:text="Xác nhận"
+        android:textSize="25sp"
+        android:textColor="#5d5c78"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>

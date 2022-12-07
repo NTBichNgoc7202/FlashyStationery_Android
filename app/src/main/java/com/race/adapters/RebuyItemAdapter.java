@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.race.flashystationery.R;
-import com.race.fragment.CartRebuyFragment;
+import com.race.fragments.CartRebuyFragment;
 import com.race.models.RebuyItem;
 
 import java.util.List;
