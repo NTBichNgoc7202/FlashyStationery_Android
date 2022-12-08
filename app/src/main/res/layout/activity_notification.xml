@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".NotificationActivity"
     android:background="#F7F8F4"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:orientation="vertical">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <TableRow>
             <LinearLayout
+                android:id="@+id/ll_Message"
                 android:layout_weight="1"
                 android:layout_span="2"
                 android:background="@drawable/image_shadow_3">
@@ -36,6 +38,7 @@
         </TableRow>
         <TableRow>
             <LinearLayout
+                android:id="@+id/ll_Order"
                 android:layout_weight="1"
                 android:layout_span="2"
                 android:background="@drawable/image_shadow_3"
@@ -60,6 +63,7 @@
 
         <TableRow>
             <LinearLayout
+                android:id="@+id/ll_Promotion"
                 android:layout_weight="1"
                 android:layout_span="2"
                 android:background="@drawable/image_shadow_3"
@@ -84,6 +88,7 @@
 
         <TableRow>
             <LinearLayout
+                android:id="@+id/ll_Announcement"
                 android:layout_weight="1"
                 android:layout_span="2"
                 android:background="@drawable/image_shadow_3"
@@ -105,35 +110,235 @@
                     tools:ignore="RtlCompat" />
             </LinearLayout>
         </TableRow>
-        <TableRow android:layout_marginTop="10dp">
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cập nhật đơn hàng"
-                android:textColor="#5D5C78"
-                android:textSize="18sp"
-                android:textAlignment="textStart"
-                />
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Đọc tất cả (4)"
-                android:textColor="#D8BDC1"
-                android:textSize="18sp"
-                android:textAlignment="textEnd"/>
-        </TableRow>
-        <TableRow
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:background="#D8BDC1"
-            android:layout_marginTop="10dp">
-            <ListView
-                android:layout_weight="1"/>
-        </TableRow>
-
     </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật đơn hàng"
+            android:textColor="#5D5C78"
+            android:textStyle=""
+            android:textSize="18sp"
+            android:layout_weight="5"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đọc tất cả (4)"
+            android:textColor="#D8BDC1"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:layout_weight="5"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_Update1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#D8BDC1">
+                <ImageView
+                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/so_caro"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="9"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giao kiện hàng thành công"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kiện hàng A của đơn hàng B đã giao thành công đến bạn. Ấn vào để xem chi tiết."
+                        android:textSize="11sp"
+                        android:layout_gravity="start"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Update2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#D8BDC1"
+                android:layout_marginTop="3dp">
+                <ImageView
+                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/so_caro"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="9"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đang giao"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kiện hàng A của đơn hàng B đang được giao đến bạn. Ấn vào để xem chi tiết."
+                        android:textSize="11sp"
+                        android:layout_gravity="start"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Update3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#D8BDC1"
+                android:layout_marginTop="3dp">
+                <ImageView
+                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/so_caro"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="9"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chờ lấy hàng"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kiện hàng A của đơn hàng B đang chờ đơn vị vận chuyển đến lấy. Ấn vào để xem chi tiết."
+                        android:textSize="11sp"
+                        android:layout_gravity="start"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Update4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#D8BDC1"
+                android:layout_marginTop="3dp">
+                <ImageView
+                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/so_caro"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="9"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chờ xác nhận"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kiện hàng A của đơn hàng B đang chờ xác nhận và đóng gói. Ấn vào để xem chi tiết."
+                        android:textSize="11sp"
+                        android:layout_gravity="start"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!--        <TableRow -->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:weightSum="10">-->
+<!--            <TextView-->
+<!--                android:layout_weight="0"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cập nhật đơn hàng"-->
+<!--                android:textColor="#5D5C78"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textAlignment="textStart"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_weight="9"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Đọc tất cả (4)"-->
+<!--                android:textColor="#D8BDC1"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textAlignment="textEnd"/>-->
+<!--        </TableRow>-->
+<!--        <TableRow-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="#D8BDC1"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:weightSum="10">-->
+<!--            <ImageView-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:src="@drawable/so_caro"-->
+<!--                android:layout_weight="1"/>-->
+<!--            <LinearLayout-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_weight="9"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center_vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Giao kiện hàng thành công"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_gravity="start"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Kiện hàng A của đơn hàng B đã giao thành công đến bạn. Ấn vào để xem chi tiết."-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:layout_gravity="start"/>-->
+<!--            </LinearLayout>-->
+<!--        </TableRow>-->
+
+
 
 </LinearLayout>
