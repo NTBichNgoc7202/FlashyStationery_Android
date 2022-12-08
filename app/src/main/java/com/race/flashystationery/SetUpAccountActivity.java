@@ -1,8 +1,10 @@
 package com.race.flashystationery;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -19,17 +21,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.race.adapters.AddressAdapter;
-import com.race.models.Address;
-import com.race.models.Register;
 
-import java.util.ArrayList;
+
 
 public class SetUpAccountActivity extends AppCompatActivity {
-//    @NonNull ActivitySetUpAccountBinding binding;
-//    RegisterDatabaseHelper adapter;
-//    ArrayList<Register> registers;
-//    public static RegisterDatabaseHelper dB;
 
     private TextView txtShowFullName, txtShowPassWordHint,txtShowEmail, txtShowPhoneNumber, txtShowGender, txtShowDOB, txtShowSocialMedia, txtShowAccountBank;
     private ProgressBar progressBar;
@@ -47,13 +42,7 @@ public class SetUpAccountActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Home");
 
-//        binding = ActivitySetUpAccountBinding.inflate(getLayoutInflater());
-//
-//        getSupportActionBar().setTitle("Tài khoản");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//        createDb();
-//        loadData();
+
 
 
         txtShowFullName = findViewById(R.id.txt_ShowFullName);
@@ -72,10 +61,40 @@ public class SetUpAccountActivity extends AppCompatActivity {
         if (firebaseUser == null){
             Toast.makeText(SetUpAccountActivity.this, "something went  wrong! Users details are not available at the moment", Toast.LENGTH_SHORT).show();
         }else {
+            checkifEmailVerified(firebaseUser);
+
             progressBar.setVisibility(View.VISIBLE);
             showUserProdile(firebaseUser);
 
         }
+
+    }
+    //Users coming to SetUpAccountActivity after successful registeration
+    private void checkifEmailVerified(FirebaseUser firebaseUser) {
+        showAlertDiolog();
+    }
+
+    private void showAlertDiolog() {
+        //Setup the Alert Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(SetUpAccountActivity.this);
+        builder.setTitle("Email không được xác nhận");
+        builder.setMessage("Vui lòng xác nhận email của bạn ngay bây giờ. Bạn không thể đăng nhập nếu không xác thực eamil vào lần tới");
+        //Open Email Apps if user clicks/tap continue button
+        builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_APP_EMAIL);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // To email app in new window and not within and not within our app
+                startActivity(intent);
+            }
+        });
+
+        //Create the AlertDialog
+        AlertDialog alertDialog = builder.create();
+
+        //Show the Allert Dialog
+        alertDialog.show();
 
     }
 
@@ -116,28 +135,4 @@ public class SetUpAccountActivity extends AppCompatActivity {
         });
     }
 
-
-//    private void loadData() {
-//
-//        registers = new ArrayList<>();
-//        registers.clear();
-//
-//        Cursor c = dB.getData();
-//
-//        if (c.getCount() == 0)
-//            Toast.makeText(SetUpAccountActivity.this, "No data to load",
-//                    Toast.LENGTH_SHORT).show();
-//        else {
-//            while (c.moveToNext()){
-//                registers.add(new Register(c.getInt(0), c.getString(1),c.getString(2),
-//                        c.getString(3),c.getString(4),c.getString(5),c.getString(6)));
-//            }
-//            c.close();
-//        }
-//    }
-
-//    private void createDb() {
-//        dB = new RegisterDatabaseHelper(SetUpAccountActivity.this);
-//        dB.createSampleData();
-//    }
 }
