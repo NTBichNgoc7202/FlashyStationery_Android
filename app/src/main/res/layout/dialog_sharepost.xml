@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sao chép"
                 android:textColor="#000000"
-                android:textSize="16dp"/>
+                android:textSize="15dp"/>
 
         </LinearLayout>
 
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="Facebook"
                 android:textColor="#000000"
-                android:textSize="16dp"/>
+                android:textSize="15dp"/>
 
         </LinearLayout>
 
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="Messenger"
                 android:textColor="#000000"
-                android:textSize="16dp"/>
+                android:textSize="15dp"/>
 
         </LinearLayout>
 
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Gmail"
                 android:textColor="#000000"
-                android:textSize="16dp"/>
+                android:textSize="15dp"/>
 
         </LinearLayout>
     </LinearLayout>
