@@ -51,7 +51,7 @@ public class NoteBookActivity extends AppCompatActivity {
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.planneritem,
                 "Sổ kế hoạch lò xo kép Study Planner B5 160 trang",
                 75000.0));
-        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.notebook2,
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.socongbianhua,
                 "Sổ Binder File Caro còng sắt B5 26 chấu 80 tờ",
                 78000.0));
         itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.notebook1,

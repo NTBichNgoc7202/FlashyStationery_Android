@@ -1,7 +1,5 @@
 package com.race.adapters;
 
-import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +10,8 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.race.flashystationery.Banner;
-import com.race.flashystationery.Photos;
 import com.race.flashystationery.R;
-import com.race.fragment.HomeFragment;
+import com.race.fragments.HomeFragment;
 
 import java.util.List;
 

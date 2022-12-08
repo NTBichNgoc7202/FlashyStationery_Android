@@ -1,15 +1,14 @@
 package com.race.flashystationery;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.race.flashystationery.databinding.ActivityNotificationBinding;
-import com.race.fragment.CartFragment;
 
 public class NotificationActivity extends AppCompatActivity {
     ActivityNotificationBinding binding;
@@ -34,14 +33,6 @@ public class NotificationActivity extends AppCompatActivity {
             }
         });
 
-//        binding.llOrder.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(NotificationActivity.this, MessageActivity.class);
-//                intent.putExtra("position",2);
-//                startActivity(intent);
-//            }
-//        });
         binding.llOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,19 +56,28 @@ public class NotificationActivity extends AppCompatActivity {
         binding.llUpdate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                //startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                Intent intent = new Intent(NotificationActivity.this, OrderTrackingActivity.class);
+                intent.putExtra("position",3);
+                startActivity(intent);
             }
         });
         binding.llUpdate2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                //startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                Intent intent = new Intent(NotificationActivity.this, OrderTrackingActivity.class);
+                intent.putExtra("position",2);
+                startActivity(intent);
             }
         });
         binding.llUpdate3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                //startActivity(new Intent(NotificationActivity.this, OrderTrackingActivity.class ));
+                Intent intent = new Intent(NotificationActivity.this, OrderTrackingActivity.class);
+                intent.putExtra("position",1);
+                startActivity(intent);
             }
         });
         binding.llUpdate4.setOnClickListener(new View.OnClickListener() {
