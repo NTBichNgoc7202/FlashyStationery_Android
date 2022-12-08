@@ -21,6 +21,7 @@ import android.widget.SearchView;
 import com.race.adapters.BannerAdapter;
 import com.race.adapters.HotProductAdapter;
 import com.race.adapters.ItemNoteBookAdapter;
+import com.race.flashystationery.NotificationActivity;
 import com.race.models.Banner;
 import com.race.flashystationery.NoteBookActivity;
 //import com.race.flashystationery.NotificationActivity;
@@ -209,10 +210,10 @@ public class HomeFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        if (item.getItemId() == R.id.app_Bar_Notify)
-//            startActivity(new Intent(getActivity(), NotificationActivity.class));
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.app_Bar_Notify)
+            startActivity(new Intent(getActivity(), NotificationActivity.class));
+        return super.onOptionsItemSelected(item);
+    }
 }
