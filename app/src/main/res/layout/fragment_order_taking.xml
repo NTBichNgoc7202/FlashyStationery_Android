@@ -1,137 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.race.fragments.OrderConfirmFragment"
     android:background="@color/cultured"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="com.race.fragments.OrderConfirmFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginVertical="10dp"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="10dp"
-        android:background="@color/white">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:id="@+id/ll_OrderTaking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginVertical="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
             <LinearLayout
+                android:id="@+id/ll_OrderTaking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/notebook" />
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/address_home_background"
-                        android:text="Đang lấy hàng"
-                        android:textColor="@color/black_coral"
-                        android:paddingHorizontal="8dp"
-                        android:paddingVertical="2dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="@color/black_coral"
-                        android:layout_marginTop="5dp"/>
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Phân loại: 100 trang, Mẫu: 05"
-                        android:textColor="#858585"
-                        android:textSize="14sp" />
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/notebook" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="48.000đ"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
-                            android:textColor="@color/black_coral"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            android:background="@drawable/address_home_background"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="2dp"
+                            android:text="Đang lấy hàng"
+                            android:textColor="@color/black_coral" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Số lượng: 1"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:text="Sổ Tay Ghi Chép giấy kraft Nâu Có Dòng Kẻ"
                             android:textColor="@color/black_coral"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phân loại: 100 trang, Mẫu: 05"
+                            android:textColor="#858585"
+                            android:textSize="14sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="48.000đ"
+                                android:textColor="@color/black_coral"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Số lượng: 1"
+                                android:textColor="@color/black_coral"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
                 </LinearLayout>
+
+                <!--Thành tiền-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/order_tracking_line_bg"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 sản phẩm"
+                        android:textColor="@color/black_coral"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="Thành tiền: "
+                        android:textColor="@color/black_coral"
+                        app:layout_constraintEnd_toStartOf="@+id/txt_TotalPrice"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_TotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_border_2"
+                        android:paddingHorizontal="8dp"
+                        android:text="152.000 đ"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
-            <!--Thành tiền-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/order_tracking_line_bg"
-                android:layout_marginVertical="10dp"
-                android:paddingVertical="10dp">
+                android:layout_gravity="center">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2 sản phẩm"
-                    android:textColor="@color/black_coral"
+                    android:gravity="center_vertical"
+                    android:text="Dự kiến bàn giao: 20-21 thg 12 2022"
+                    android:textColor="#ACACAC"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Thành tiền: "
-                    android:textColor="@color/black_coral"
-                    app:layout_constraintEnd_toStartOf="@+id/txt_TotalPrice"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginEnd="5dp"/>
-                <TextView
-                    android:id="@+id/txt_TotalPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="152.000 đ"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:background="@drawable/round_border_2"
-                    android:paddingHorizontal="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="Dự kiến bàn giao: 20-21 thg 12 2022"
-                android:textColor="#ACACAC"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="10dp"
+            android:layout_span="4"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="Có thể bạn cũng thích"
+            android:textColor="#5D5C78"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.race.expandableview.ExpandableHeightGridView
+            android:id="@+id/gv_SuggestProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:nestedScrollingEnabled="true"
+            android:numColumns="2"
+            android:verticalSpacing="5dp" />
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
