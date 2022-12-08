@@ -29,6 +29,7 @@ public class AccountFragment extends Fragment {
    FragmentAccountBinding binding;
 
     public AccountFragment() {
+
         // Required empty public constructor
     }
 
@@ -108,6 +109,7 @@ public class AccountFragment extends Fragment {
         binding.llAccountSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getActivity(), SetUpAccountActivity.class));
 
 
             }

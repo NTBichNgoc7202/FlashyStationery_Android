@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -59,7 +61,7 @@ public class SetUpAccountActivity extends AppCompatActivity {
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = authProfile.getCurrentUser();
         if (firebaseUser == null){
-            Toast.makeText(SetUpAccountActivity.this, "something went  wrong! Users details are not available at the moment", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SetUpAccountActivity.this, "Đã xảy ra sự cố! Chi tiết người dùng hiện không có sẵn", Toast.LENGTH_SHORT).show();
         }else {
             checkifEmailVerified(firebaseUser);
 
@@ -134,5 +136,46 @@ public class SetUpAccountActivity extends AppCompatActivity {
             }
         });
     }
+   //Creating ActionBar Menu
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.common_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       int id = item.getItemId();
+       if (id == R.id.menu_refesh){
+           startActivity(getIntent());
+           finish();
+//       } else if (id == R.id.mn_update_profile){
+//           Intent intent = new Intent(SetUpAccountActivity.this, UpdateProfileActivity.class);
+//           startActivity(intent);
+//       }else if (id == R.id.mn_update_email){
+//           Intent intent = new Intent(SetUpAccountActivity.this, UpdateEmailActivity.class);
+//           startActivity(intent);
+//       }else if (id == R.id.mn_setting) {
+           Toast.makeText(SetUpAccountActivity.this, "menu_settings", Toast.LENGTH_SHORT).show();
+//       }else  if (id == R.id.mn_change_password){
+//           Intent intent = new Intent(SetUpAccountActivity.this, UpdatePasswordActivity.class);
+//           startActivity(intent);
+//       }else  if (id == R.id.mn_delete_profile){
+//           Intent intent = new Intent(SetUpAccountActivity.this, DeleteActivity.class);
+//           startActivity(intent);
+       }else if (id == R.id.mn_logout) {
+           authProfile.signOut();
+           Toast.makeText(SetUpAccountActivity.this, "Đăng xuất", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(SetUpAccountActivity.this, LoginRegisterActivity.class);
+
+           intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+           startActivity(intent);
+           finish();
+       } else {
+           Toast.makeText(SetUpAccountActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
+       }
+        return super.onOptionsItemSelected(item);
+    }
 }
