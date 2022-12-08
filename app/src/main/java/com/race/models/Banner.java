@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.models;
 
 public class Banner {
     private int resource_id;
