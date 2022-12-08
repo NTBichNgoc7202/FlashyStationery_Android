@@ -48,7 +48,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/notebook2"/>
+                        android:src="@drawable/socongbianhua"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,11 +56,6 @@
                         android:textColor="#5D5C78"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
-
-
-
-
-
             </LinearLayout>
 
         </LinearLayout>

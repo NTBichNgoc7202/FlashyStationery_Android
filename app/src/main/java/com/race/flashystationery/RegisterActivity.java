@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -19,7 +22,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthEmailException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -28,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private RadioGroup radioGroupRegisterGender;
     private RadioButton radioButtonRegisterGenderSelected;
+    private static final String TAG= "RegisterActivity";
+    private  DatePickerDialog picker;
 //    ActivityRegisterBinding binding;
 //    RegisterDatabaseHelper dB = SetUpAccountActivity.dB;
 //    TextView txtRegisterNow;
@@ -48,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Tạo tài khoản");
         Toast.makeText(RegisterActivity.this, "Bạn có thể tạo tài khoản ngay bây giờ", Toast.LENGTH_SHORT).show();
 
-        progressBar = findViewById(R.id.processBar);
+        progressBar = findViewById(R.id.progressBar);
         edtInputFullName = findViewById(R.id.edt_InputAccountName);
         edtInputPhoneNumber = findViewById(R.id.edt_InputPhoneNumber);
         edtInputEmail = findViewById(R.id.edt_InputEmail);
@@ -59,6 +75,27 @@ public class RegisterActivity extends AppCompatActivity {
         //RadioButton for Gender
         radioGroupRegisterGender = findViewById(R.id.radio_group);
         radioGroupRegisterGender.clearCheck();
+
+        //Setting up DatePicker  on Editext
+        edtInputDOB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+
+                //Date Picker Dialog
+                picker = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                    edtInputDOB.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    }
+                }, year, month, day);
+                picker.show();
+
+            }
+        });
 
         AppCompatButton btnSignUp = findViewById(R.id.btn_SignUp);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +114,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String textDOB = edtInputDOB.getText().toString();
                 String textPassword = edtInputPassword.getText().toString();
                 String textConfirmPassword = edtInputConfirmPassWord.getText().toString();
-                String textGender;
-                //Can't obtain the view before verifying if any button was selected or not
+                String textGender;//Can't obtain the view before verifying if any button was selected or not
+
+                //Validate Mobile Number using Matcher and Pattern (Regular Expressiob)
+                String mobileRegex = "(0)[1-9]{9}";
+                Matcher mobileMatcher;
+                Pattern mobilePattern = Pattern.compile(mobileRegex);
+                mobileMatcher = mobilePattern.matcher(textPhoneNumber);
+
 
                 if (TextUtils.isEmpty(textFullName)) {
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập tên của bạn", Toast.LENGTH_LONG).show();
@@ -93,7 +136,12 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập lại số điện thoại của bạn", Toast.LENGTH_LONG).show();
                     edtInputPhoneNumber.setError("Số điện thoại chỉ gồm 10 chữ số");
                     edtInputPhoneNumber.requestFocus();
-                }  else if (TextUtils.isEmpty(textEmail)) {
+                }else if (!mobileMatcher.find()){
+                    Toast.makeText(RegisterActivity.this, "Vui lòng nhập lại số điện thoại của bạn", Toast.LENGTH_LONG).show();
+                    edtInputPhoneNumber.setError("Số điện thoại không hợp lệ");
+                    edtInputPhoneNumber.requestFocus();
+                }
+                    else if (TextUtils.isEmpty(textEmail)) {
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập email của bạn", Toast.LENGTH_LONG).show();
                     edtInputEmail.setError("Bắt buộc nhập email");
                     edtInputEmail.requestFocus();
@@ -138,32 +186,94 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-    //Register User using the credentials given
+
     private void RegisterUser(String textFullName, String textPhoneNumber, String textEmail, String textDOB, String textGender, String textPassword) {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.createUserWithEmailAndPassword(textEmail, textPassword).addOnCompleteListener(RegisterActivity.this,
-                new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thành công", Toast.LENGTH_LONG).show();
-                        FirebaseUser firebaseUser = auth.getCurrentUser();
+        //Register User using the credentials given
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+           //Create User Profile
+            auth.createUserWithEmailAndPassword(textEmail, textPassword).addOnCompleteListener(RegisterActivity.this,
+                    new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(RegisterActivity.this, "Bạn đã đăng ký thành công", Toast.LENGTH_LONG).show();
+                                FirebaseUser firebaseUser = auth.getCurrentUser();
 
-                        //Send Verification Email
-                        firebaseUser.sendEmailVerification();
+                                //Enter User Data into the Firebase Realtime DataBase
+                                ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textPhoneNumber, textDOB, textGender);
 
-                        //Open User profile after successful registation
-                        Intent intent = new Intent(RegisterActivity.this, SetUpAccountActivity.class);
-                        //To Prevent User from returning back to Register Activity on pressing back button after registration
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                        //to close Register  Activity
+                                //Extracting User reference from Database for "Register Users"
+                                DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registerd Users");
 
+                                //Send Verification
+                                firebaseUser.sendEmailVerification();
 
-                    }
-                });
+//
+//
+                                //Update Display Name of User
+                                UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(textFullName).build();
+
+                                firebaseUser.updateProfile(profileChangeRequest);
+
+                                referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()){
+
+                                            //Send Verification Email
+                                            firebaseUser.sendEmailVerification();
+
+                                            Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thành công, Vui lòng xác nhận email", Toast.LENGTH_LONG).show();
+
+                                            //Open User profile after successful registation
+                                            Intent intent = new Intent(RegisterActivity.this, SetUpAccountActivity.class);
+//                                          //To Prevent User from returning back to Register Activity on pressing back button after registration
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                              startActivity(intent);
+                                              finish();
+//                                           //to close Register  Activity
+
+                                        }else {
+
+                                            Toast.makeText(RegisterActivity.this, "Đăng ký tài khoản thất bại, Hãy thử lại một lần nữa", Toast.LENGTH_LONG).show();
+
+                                        }
+                                        //Hide ProgressBar whether User creation is succesful of fail
+                                        progressBar.setVisibility(View.GONE);
+                                    }
+                                });
+
+                            } else {
+                                try {
+                                    throw task.getException();
+                                }catch (FirebaseAuthWeakPasswordException e) {
+                                    edtInputPassword.setError("Your password is tô weak. Kindly use a mix of alphebets");
+                                    edtInputPassword.requestFocus();
+                                }catch (FirebaseAuthInvalidCredentialsException e) {
+                                    edtInputPassword.setError("Your email is invalid or already  in use. Kindly re-enter");
+                                    edtInputPassword.requestFocus();
+                                }catch (FirebaseAuthUserCollisionException e){
+                                    edtInputPassword.setError("User is already registered with this email, Use another email.");
+                                    edtInputPassword.requestFocus();
+                                }catch (Exception e){
+                                    Log.e(TAG,e.getMessage());
+                                    Toast.makeText(RegisterActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                                //Hide ProgressBar whether User creation is succesful of fail
+                                progressBar.setVisibility(View.GONE);
+
+                            }
+
+//
+
+                        }
+                    });
+
 
     }
+
+
+
 
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
