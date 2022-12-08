@@ -47,36 +47,5 @@ public class LoginRegisterActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//
-//
-//        binding = ActivityLoginRegisterBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
-//
-//        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(LoginRegisterActivity.this, LoginActivity.class));
-//
-//            }
-//        });
-//
-//        binding.btnRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(LoginRegisterActivity.this, RegisterActivity.class));
-//
-//            }
-//        });
-//
-//        binding.txtPass.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(LoginRegisterActivity.this,MainActivity.class));
-//            }
-//        });
     }
 }
