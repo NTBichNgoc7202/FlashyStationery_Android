@@ -86,7 +86,7 @@
                 <Button
                     android:id="@+id/btn_DanhGia"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/image_shadow"
                     android:layout_gravity="end"
                     android:text="Đánh giá"
@@ -169,7 +169,7 @@
                 <Button
                     android:id="@+id/btn_DaNhanDuocHang"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/image_shadow"
                     android:layout_gravity="end"
                     android:text="ĐÃ NHẬN ĐƯỢC HÀNG"
@@ -256,7 +256,7 @@
                 <Button
                     android:id="@+id/btn_XemChiTiet1"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/image_shadow"
                     android:layout_gravity="end"
                     android:text="XEM CHI TIẾT"
@@ -343,7 +343,7 @@
                 <Button
                     android:id="@+id/btn_XemChiTiet2"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/image_shadow"
                     android:layout_gravity="end"
                     android:text="XEM CHI TIẾT"
