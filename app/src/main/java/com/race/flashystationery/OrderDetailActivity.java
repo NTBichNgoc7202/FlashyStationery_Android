@@ -142,11 +142,11 @@ public class OrderDetailActivity extends AppCompatActivity {
         Button btnRebuy = new Button(this);
         Button btnReturn = new Button(this);
 
-        btnRebuy.setText("Mua lại");
+        btnRebuy.setText("Trả hàng");
         customButton(btnRebuy);
         binding.llButton.addView(btnRebuy);
 
-        btnReturn.setText("Trả hàng");
+        btnReturn.setText("Đánh giá");
         customButton(btnReturn);
         binding.llButton.addView(btnReturn);
         btnReturn.setOnClickListener(new View.OnClickListener() {
