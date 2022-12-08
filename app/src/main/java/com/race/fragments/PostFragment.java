@@ -93,11 +93,11 @@ public class PostFragment extends Fragment {
         binding.btnSendcmt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bottomSheetSharePost == null) {
-                    bottomSheetSharePost = new BottomSheetDialog(getActivity());
-                    bottomSheetSharePost.setContentView(R.layout.activity_login_request);
+                if (bottomSheetRequest == null) {
+                    bottomSheetRequest = new BottomSheetDialog(getActivity());
+                    bottomSheetRequest.setContentView(R.layout.activity_login_request);
                 }
-                bottomSheetSharePost.show();
+                bottomSheetRequest.show();
             }
         });
         binding.btnSendcmt2.setOnClickListener(new View.OnClickListener() {
