@@ -12,7 +12,6 @@
         android:textStyle="bold"
         android:padding="5dp"
         android:textColor="#000000"
-        android:drawableRight="@android:drawable/ic_delete"
         android:background="@drawable/shadow_for_header"/>
 
     <LinearLayout
@@ -21,7 +20,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/saochep"
+            android:id="@+id/ll_saochep"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
@@ -42,7 +41,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/facebook"
+            android:id="@+id/ll_facebook"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
@@ -63,7 +62,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/mess"
+            android:id="@+id/ll_mess"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
@@ -84,7 +83,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/gmail"
+            android:id="@+id/ll_gmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"

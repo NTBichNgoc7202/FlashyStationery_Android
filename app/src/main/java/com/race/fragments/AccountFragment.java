@@ -20,6 +20,7 @@ import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.OrderTrackingActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.SetUpAccountActivity;
+import com.race.flashystationery.SettingActivity;
 import com.race.flashystationery.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment {
@@ -143,6 +144,7 @@ public class AccountFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.mn_Setting){
             //Opening Setting Act
+            startActivity(new Intent(getActivity(), SettingActivity.class));
 
         } else if (item.getItemId() == R.id.mn_Notify){
             //Opening Notification Act
