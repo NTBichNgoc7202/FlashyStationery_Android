@@ -10,5 +10,7 @@ public class SettingLanguage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_language);
+        getSupportActionBar().setTitle("Cài đặt ngôn ngữ");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

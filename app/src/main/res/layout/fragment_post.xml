@@ -137,7 +137,7 @@
                     android:textSize="15dp" />
 
                 <ImageView
-                    android:id="@+id/imvshare_blog"
+                    android:id="@+id/imvshare_blog1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:srcCompat="?android:attr/actionModeShareDrawable" />
@@ -244,10 +244,19 @@
                 android:src="@drawable/user" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:hint="Để lại bình luận của bạn..." />
+
+            <Button
+                android:id="@+id/btn_sendcmt1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_button_3"
+                android:text="Gửi"
+                android:textColor="#ffffff" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/post2"
@@ -404,13 +413,16 @@
                 android:textColor="#000000"
                 android:text="Xinh quá shop uiiii" />
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/txtdetails"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Xem tất cả bình luận"
                 android:textStyle="italic"
                 android:textColor="#3949AB"
                 android:textSize="15dp"
-                android:gravity="right"/>
+                android:layout_gravity="right"
+                android:onClick="onClick"
+                android:clickable="true"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -422,10 +434,18 @@
                 android:src="@drawable/user" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:hint="Để lại bình luận của bạn..." />
+            <Button
+                android:id="@+id/btn_sendcmt2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:textColor="#ffffff"
+                android:background="@drawable/round_button_3"
+                android:text="Gửi"/>
         </LinearLayout>
     </LinearLayout>
 

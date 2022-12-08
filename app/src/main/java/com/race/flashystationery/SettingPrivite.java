@@ -10,5 +10,7 @@ public class SettingPrivite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_privite);
+        getSupportActionBar().setTitle("Cài đặt quyền riêng tư");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
