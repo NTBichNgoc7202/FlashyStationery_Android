@@ -23,7 +23,7 @@ import com.race.adapters.HotProductAdapter;
 import com.race.adapters.ItemNoteBookAdapter;
 import com.race.models.Banner;
 import com.race.flashystationery.NoteBookActivity;
-import com.race.flashystationery.NotificationActivity;
+//import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.ProductActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentHomeBinding;
@@ -209,10 +209,10 @@ public class HomeFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.app_Bar_Notify)
-            startActivity(new Intent(getActivity(), NotificationActivity.class));
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (item.getItemId() == R.id.app_Bar_Notify)
+//            startActivity(new Intent(getActivity(), NotificationActivity.class));
+//        return super.onOptionsItemSelected(item);
+//    }
 }
