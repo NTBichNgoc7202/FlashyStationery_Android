@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737269205135",
+    "project_id": "flashy-stationery",
+    "storage_bucket": "flashy-stationery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737269205135:android:395e989612db3e6ded48fa",
+        "android_client_info": {
+          "package_name": "com.race.flashystationery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737269205135-c41tiop9vvt447b4hcriekufh3rmtu3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhx8ytxCxwlgk4jSiUID417DmYieB_ff8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737269205135-c41tiop9vvt447b4hcriekufh3rmtu3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

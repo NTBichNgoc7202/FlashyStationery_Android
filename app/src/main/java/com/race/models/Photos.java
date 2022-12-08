@@ -1,4 +1,4 @@
-package com.race.flashystationery;
+package com.race.models;
 
 public class Photos {
     private int resource_id;
