@@ -198,8 +198,6 @@ public class OrderPaymentActivity extends AppCompatActivity {
 
         paymentMethodAdapter = new PaymentMethodAdapter(OrderPaymentActivity.this, R.layout.payment_method_list, methods);
         binding.gvPaymentMethod.setAdapter(paymentMethodAdapter);
-        binding.gvPaymentMethod.setSelection(0);
-        binding.gvPaymentMethod.setItemChecked(0, true);
     }
 
     public void loadItemData() {
