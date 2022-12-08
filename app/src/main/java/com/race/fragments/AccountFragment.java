@@ -15,11 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.race.flashystationery.AddressListActivity;
+import com.race.flashystationery.CustomerSupport;
 import com.race.flashystationery.FavoriteProductActivity;
 import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.OrderTrackingActivity;
+import com.race.flashystationery.PolicyListActivity;
 import com.race.flashystationery.R;
-import com.race.flashystationery.SetUpAccountActivity;
 import com.race.flashystationery.SettingActivity;
 import com.race.flashystationery.databinding.FragmentAccountBinding;
 
@@ -110,6 +111,7 @@ public class AccountFragment extends Fragment {
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), SetUpAccountActivity.class));
 
+
             }
         });
 
@@ -123,14 +125,14 @@ public class AccountFragment extends Fragment {
         binding.llPolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getActivity(), PolicyListActivity.class));
             }
         });
 
         binding.llSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getActivity(), CustomerSupport.class));
             }
         });
     }

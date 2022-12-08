@@ -163,6 +163,12 @@
                             android:layout_height="50dp"
                             android:layout_gravity="bottom"
                             android:layout_weight="0.5"
+                            android:src="@drawable/ic_baseline_send_24"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.5"
                             android:src="@drawable/smileicon"/>
                 </LinearLayout>
         </LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imv_Illustrator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/image_shadow_4"
+        android:src="@drawable/private_policy" />
+    <TextView
+        android:textColor="#5D5C78"
+        android:id="@+id/txt_PolicyDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/private_policy"/>
+</ScrollView>

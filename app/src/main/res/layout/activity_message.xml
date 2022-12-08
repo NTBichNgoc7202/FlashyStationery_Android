@@ -28,7 +28,7 @@
             <LinearLayout
                 android:id="@+id/ll_Tam"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
@@ -76,7 +76,7 @@
             <LinearLayout
                 android:id="@+id/ll_Ngoc"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
@@ -124,7 +124,7 @@
             <LinearLayout
                 android:id="@+id/ll_Phuc"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
@@ -172,7 +172,7 @@
             <LinearLayout
                 android:id="@+id/ll_Trinh"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
@@ -220,7 +220,7 @@
             <LinearLayout
                 android:id="@+id/ll_Khoa"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
@@ -268,7 +268,7 @@
             <LinearLayout
                 android:id="@+id/ll_My"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/image_shadow_4"
                 android:padding="10dp"
