@@ -21,7 +21,7 @@ import android.widget.SearchView;
 import com.race.adapters.BannerAdapter;
 import com.race.adapters.HotProductAdapter;
 import com.race.adapters.ItemNoteBookAdapter;
-import com.race.flashystationery.Banner;
+import com.race.models.Banner;
 import com.race.flashystationery.NoteBookActivity;
 import com.race.flashystationery.NotificationActivity;
 import com.race.flashystationery.ProductActivity;

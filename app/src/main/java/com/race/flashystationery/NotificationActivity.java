@@ -1,7 +1,6 @@
 package com.race.flashystationery;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.race.flashystationery.databinding.ActivityNotificationBinding;
 
 public class NotificationActivity extends AppCompatActivity {
+    ActivityNotificationBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
