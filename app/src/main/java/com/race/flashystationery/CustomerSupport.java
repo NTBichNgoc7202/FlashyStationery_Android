@@ -10,12 +10,14 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.race.flashystationery.databinding.ActivityAddressListBinding;
 import com.race.flashystationery.databinding.ActivityCustomerSupportBinding;
+import com.race.fragments.AccountFragment;
 
 public class CustomerSupport extends AppCompatActivity {
     public static final int REQUEST_CALL = 1;
@@ -41,27 +43,27 @@ public class CustomerSupport extends AppCompatActivity {
     }
 
 
-
     private void addEvents() {
         binding.llChatSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(CustomerSupport.this, MessageSupport.class);
+                startActivity(intent);
             }
         });
         binding.llCallSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               makeCall();
+                makeCall();
             }
         });
 
         binding.llEmailSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent intent = new Intent(CustomerSupport.this, EmailSupportActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(CustomerSupport.this, EmailSupportActivity.class);
+                startActivity(intent);
+            }
         });
 
     }
@@ -69,9 +71,8 @@ public class CustomerSupport extends AppCompatActivity {
     private void makeCall() {
         if (ActivityCompat.checkSelfPermission(CustomerSupport.this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(CustomerSupport.this, new String[] {Manifest.permission.CALL_PHONE}, REQUEST_CALL);}
-        else
-        {
+            ActivityCompat.requestPermissions(CustomerSupport.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:0357887939"));
@@ -80,8 +81,8 @@ public class CustomerSupport extends AppCompatActivity {
     }
 
     private void loadData() {
-    adapter = new ArrayAdapter<String>(CustomerSupport.this, android.R.layout.simple_list_item_1,questions);
-    binding.lvQuestion.setAdapter(adapter);
+        adapter = new ArrayAdapter<String>(CustomerSupport.this, android.R.layout.simple_list_item_1, questions);
+        binding.lvQuestion.setAdapter(adapter);
     }
 
     @Override
@@ -89,14 +90,25 @@ public class CustomerSupport extends AppCompatActivity {
 
         if (requestCode == REQUEST_CALL) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            makeCall();
-            }
-            else {
+                makeCall();
+            } else {
                 Toast.makeText(this, "Từ chối cho phép gọi", Toast.LENGTH_SHORT).show();
             }
 
         }
-
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(this, AccountFragment.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
