@@ -48,6 +48,15 @@ public class LoginActivity extends AppCompatActivity {
 
         authProfile = FirebaseAuth.getInstance();
 
+        TextView txtForgotPassword = findViewById(R.id.txt_ForgotPassword);
+        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(LoginActivity.this, "Hãy lấy lại mật khẩu ngay bây giờ", Toast.LENGTH_SHORT ).show();
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+            }
+        });
+
         //Show Hide Password using Eye Icon
         ImageView imvShowHidePassword = findViewById(R.id.imv_ShowHidePasswordicon);
         imvShowHidePassword.setImageResource(R.drawable.password_hide_icon);
@@ -163,10 +172,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(authProfile.getCurrentUser() !=null){
-            Toast.makeText(LoginActivity.this, "Already Logged In!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Sẵn sàn đăng nhập!", Toast.LENGTH_SHORT).show();
         //Start the SetUpAccountActivity
-            startActivity(new Intent(LoginActivity.this, SetUpAccountActivity.class));
-       finish();//Close LoginActivity
+//            startActivity(new Intent(LoginActivity.this, SetUpAccountActivity.class));
+//       finish();//Close LoginActivity
         }
         else {
             Toast.makeText(LoginActivity.this, "Bạn có thể đăng nhập ngay bây giờ!", Toast.LENGTH_SHORT).show();

@@ -17,6 +17,8 @@
 
     <string name="user_acc_title">Hồ sơ người dùng</string>
     <string name="registernow"><b><u>ĐĂNG KÝ NGAY</u></b></string>
+    <string name="forgetpassword"><b><u>Quên mật khẩu</u></b></string>
+
     <string name="loginnow"><b><u>ĐĂNG NHẬP NGAY</u></b></string>
     <string name="otpverificationnow"><b><u>GỬI LẠI MÃ XÁC NHẬN</u></b></string>
 
