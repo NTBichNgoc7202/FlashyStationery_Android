@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.race.flashystationery.databinding.ActivityNotificationBinding;
-import com.race.fragment.CartFragment;
+import com.race.fragments.CartFragment;
 
 public class NotificationActivity extends AppCompatActivity {
     ActivityNotificationBinding binding;
