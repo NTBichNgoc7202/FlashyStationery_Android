@@ -48,7 +48,7 @@
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/notebook2"/>
+                        android:src="@drawable/socongbianhua"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,11 +56,14 @@
                         android:textColor="#5D5C78"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
-
-
-
-
-
+                <Button
+                    android:id="@+id/btn_XemChiTietSPSHH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_shadow"
+                    android:layout_gravity="end"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#5D5C78"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -109,6 +112,14 @@
                         android:textColor="#5D5C78"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
+                <Button
+                    android:id="@+id/btn_XemChiTietSPTrongGH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_shadow"
+                    android:layout_gravity="end"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#5D5C78"/>
 
 
 
@@ -162,11 +173,14 @@
                         android:textColor="#5D5C78"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
-
-
-
-
-
+                <Button
+                    android:id="@+id/btn_XemChiTietDanhGiaSP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_shadow"
+                    android:layout_gravity="end"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#5D5C78"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -215,13 +229,15 @@
                         android:textColor="#5D5C78"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
-
-
-
-
-
+                <Button
+                    android:id="@+id/btn_XemChiTietGoiYSP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_shadow"
+                    android:layout_gravity="end"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#5D5C78"/>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 

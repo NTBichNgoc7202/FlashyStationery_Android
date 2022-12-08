@@ -1,5 +1,6 @@
 package com.race.fragments;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,24 +11,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.race.flashystationery.LoginRegisterActivity;
+import com.race.flashystationery.LoginActivity;
 import com.race.flashystationery.MainActivity;
-import com.race.flashystationery.OrderPaymentActivity;
-import com.race.flashystationery.OrderTrackingActivity;
 import com.race.flashystationery.PostDetail;
 import com.race.flashystationery.ProductActivity;
 import com.race.flashystationery.R;
-import com.race.flashystationery.databinding.ActivityLoginRegisterBinding;
+import com.race.flashystationery.RegisterActivity;
 import com.race.flashystationery.databinding.FragmentPostBinding;
 
 
 public class PostFragment extends Fragment {
 
     FragmentPostBinding binding;
-    BottomSheetDialog bottomSheetSharePost;
+    BottomSheetDialog bottomSheetSharePost, bottomSheetRequest;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +64,65 @@ public class PostFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+        binding.imvshareBlog1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (bottomSheetSharePost == null) {
+                    bottomSheetSharePost = new BottomSheetDialog(getActivity());
+                    bottomSheetSharePost.setContentView(R.layout.dialog_sharepost);
+                }
+                bottomSheetSharePost.show();
+            }
+        });
+        binding.imvshareBlog2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (bottomSheetSharePost == null) {
+                    bottomSheetSharePost = new BottomSheetDialog(getActivity());
+                    bottomSheetSharePost.setContentView(R.layout.dialog_sharepost);
+                }
+                bottomSheetSharePost.show();
+            }
+        });
+        binding.btnSendcmt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (bottomSheetRequest == null) {
+                    bottomSheetRequest = new BottomSheetDialog(getActivity());
+                    bottomSheetRequest.setContentView(R.layout.activity_login_request);
+                    navigateToLoginRegister();
+                }
+                bottomSheetRequest.show();
+            }
+        });
+        binding.btnSendcmt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (bottomSheetRequest == null) {
+                    bottomSheetRequest = new BottomSheetDialog(getActivity());
+                    bottomSheetRequest.setContentView(R.layout.activity_login_request);
+                    navigateToLoginRegister();
+                }
+                bottomSheetRequest.show();
+            }
+        });
+    }
+
+    private void navigateToLoginRegister() {
+        Button btn1 = bottomSheetRequest.findViewById(R.id.btndangky);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), RegisterActivity.class));
+            }
+        });
+        Button btn2 = bottomSheetRequest.findViewById(R.id.btndangnhap);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
             }
         });
     }
