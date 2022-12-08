@@ -50,7 +50,7 @@ public class SettingActivity extends AppCompatActivity {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SettingActivity.this, MainActivity.class);
+                Intent intent = new Intent(SettingActivity.this, LoginRegisterActivity.class);
                 startActivity(intent);
             }
         });
