@@ -31,6 +31,7 @@ public class LoginRequest extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginRequest.this, RegisterActivity.class);
                 startActivity(intent);
+
             }
         });
         binding.btndangnhap.setOnClickListener(new View.OnClickListener() {
