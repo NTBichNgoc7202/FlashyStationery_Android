@@ -7,37 +7,57 @@
     android:background="@color/cultured"
     android:orientation="vertical"
     tools:context=".SettingActivity">
-    <Button
-        android:id="@+id/btn_setting_language"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_shadow_2"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:textSize="18dp"
-        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
-        android:text="Cài đặt ngôn ngữ"/>
-    <Button
-        android:id="@+id/btn_setting_notify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_shadow_2"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:textSize="18dp"
-        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
-        android:text="Cài đặt thông báo"/>
-    <Button
-        android:id="@+id/btn_setting_privite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/image_shadow_2"
-        android:gravity="center_vertical"
-        android:padding="10dp"
-        android:textSize="18dp"
-        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
-        android:text="Cài đặt quyền riêng tư"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="619dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_setting_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_shadow_2"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Cài đặt ngôn ngữ"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_setting_notify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_shadow_2"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Cài đặt thông báo"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_setting_privite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_shadow_2"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Cài đặt quyền riêng tư"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button_3"
+        android:padding="10dp"
+        android:text="Đăng xuất"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
 
 
 </LinearLayout>

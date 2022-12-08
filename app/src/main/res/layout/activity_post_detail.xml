@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F7F8F4"
-    android:layout_margin="10dp">
+    android:layout_margin="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,6 +99,7 @@
                 android:textSize="15dp" />
 
             <ImageView
+                android:id="@+id/imvsharepost"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="?attr/actionModeShareDrawable" />
@@ -279,6 +280,7 @@
                 android:layout_marginLeft="10dp"
                 android:hint="Để lại bình luận của bạn..." />
             <Button
+                android:id="@+id/btnsendcmt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
