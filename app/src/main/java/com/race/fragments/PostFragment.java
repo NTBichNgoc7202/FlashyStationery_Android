@@ -41,9 +41,9 @@ public class PostFragment extends Fragment {
 
         View view = binding.getRoot();
         addEvent();
-
-
         return view;
+
+
     }
 
     private void addEvent() {
@@ -66,14 +66,6 @@ public class PostFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
-            }
-        });
-        binding.imvshareBlog1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                bottomSheetSharePost.setContentView(R.layout.dialog_sharepost);
-                bottomSheetSharePost.show();
             }
         });
     }
