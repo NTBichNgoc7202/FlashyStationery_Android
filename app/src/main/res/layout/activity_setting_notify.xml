@@ -15,6 +15,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Thông báo"/>
     <Switch
         android:layout_width="match_parent"
@@ -25,6 +26,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Chuông thông báo"/>
     <TextView
         android:layout_width="match_parent"
@@ -40,6 +42,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Cập nhật đơn hàng"/>
     <Switch
         android:layout_width="match_parent"
@@ -50,6 +53,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Chat"/>
     <Switch
         android:layout_width="match_parent"
@@ -60,6 +64,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Hoạt động"/>
     <Switch
         android:layout_width="match_parent"
@@ -70,6 +75,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Bài viết"/>
     <Switch
         android:layout_width="match_parent"
@@ -80,6 +86,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Khuyến mãi"/>
     <TextView
         android:layout_width="match_parent"
@@ -93,6 +100,7 @@
         android:gravity="center_vertical"
         android:padding="10dp"
         android:textSize="20dp"
+        android:checked="true"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
         android:text="Email thông báo"/>
@@ -105,6 +113,7 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Cập nhật đơn hàng"/>
     <Switch
         android:layout_width="match_parent"
@@ -115,7 +124,10 @@
         android:textSize="20dp"
         android:textColor="@color/black_coral"
         android:textStyle="bold"
+        android:checked="true"
         android:text="Thông tin sản phẩm"/>
+
+
 
 
 </LinearLayout>

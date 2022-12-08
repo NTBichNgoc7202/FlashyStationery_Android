@@ -6,14 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class SettingLanguage extends AppCompatActivity {
+public class ChatBoxActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting_language);
-        getSupportActionBar().setTitle("Cài đặt ngôn ngữ");
+        setContentView(R.layout.activity_chat_box);
+
+        getSupportActionBar().setTitle("FLASHY STATIONERY");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

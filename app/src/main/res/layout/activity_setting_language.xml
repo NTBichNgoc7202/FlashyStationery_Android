@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/image_shadow_2"
-        android:drawableRight="?android:attr/textCheckMark"
+        android:drawableRight="@drawable/ic_check_box_checked"
         android:gravity="center_vertical"
         android:padding="10dp"
         android:text="TIẾNG VIỆT"
