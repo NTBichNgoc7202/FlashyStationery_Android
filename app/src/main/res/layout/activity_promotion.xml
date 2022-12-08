@@ -104,9 +104,35 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/image_shadow_3"
                 android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/socongbianhua"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chỉ 1 click nữa thôi, có ngay sổ lên kế
+hoạch siêu sịn từ Flashy kèm theo một
+cây bút xinh xắn. Đặt hàng ngay thôi!"
+                        android:textColor="#5D5C78"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_XemChiTietMua1Tang1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_shadow"
+                    android:layout_gravity="end"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#5D5C78"/>
+
             </LinearLayout>
 
         </LinearLayout>
