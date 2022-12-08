@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingNotify">
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Thông báo"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Chuông thông báo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Thông báo của tôi"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Cập nhật đơn hàng"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Chat"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Hoạt động"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Bài viết"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Khuyến mãi"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Email thông báo"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:checked="true"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:text="Email thông báo"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Cập nhật đơn hàng"/>
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_shadow_2"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black_coral"
+        android:textStyle="bold"
+        android:checked="true"
+        android:text="Thông tin sản phẩm"/>
+
+
+
+
+</LinearLayout>

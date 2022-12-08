@@ -16,8 +16,8 @@ import com.race.flashystationery.databinding.ActivityOrderTrackingBinding;
 public class OrderTrackingActivity extends AppCompatActivity {
 
     ActivityOrderTrackingBinding binding;
-    public static ViewPager2 trackingViewPager;
-    public static TabLayout trackingTabLayout;
+    ViewPager2 trackingViewPager;
+    TabLayout trackingTabLayout;
     OrderTrackingViewPagerAdapter viewPagerAdapter;
     int extraPosition;
 

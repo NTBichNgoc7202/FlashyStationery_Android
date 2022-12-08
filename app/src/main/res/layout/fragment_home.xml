@@ -2,44 +2,56 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.race.fragment.HomeFragment"
-    android:orientation="vertical">
+    tools:context="com.race.fragments.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="5dp">
+        android:paddingHorizontal="15dp">
 
-        <FrameLayout
-            android:layout_width="match_parent"
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewpagerbanner"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"/>
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/ccIndicatorBanner"
+            android:layout_marginTop="10dp">
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:layout_gravity="center|bottom" />
-        </FrameLayout>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imv_banner1"
+                    android:layout_width="978px"
+                    android:layout_height="250px"
+                    android:src="@drawable/banner1" />
+
+                <ImageView
+                    android:id="@+id/imv_banner2"
+                    android:layout_width="978px"
+                    android:layout_height="250px"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/banner2" />
+
+                <ImageView
+                    android:id="@+id/imv_banner3"
+                    android:layout_width="978px"
+                    android:layout_height="250px"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/banner3" />
+            </LinearLayout>
+        </HorizontalScrollView>
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <TableRow>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center">
                     <ImageView
                         android:id="@+id/imv_FlashSale"
                         android:layout_width="50dp"
@@ -58,10 +70,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center">
                     <ImageView
                         android:id="@+id/imv_TopSale"
                         android:layout_width="50dp"
@@ -80,10 +92,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center">
                     <ImageView
                         android:id="@+id/imv_NewProduct"
                         android:layout_width="50dp"
@@ -102,10 +114,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center">
                     <ImageView
                         android:id="@+id/imv_WarehouseDiscount"
                         android:layout_width="50dp"
@@ -125,7 +137,7 @@
             <TableRow>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="DANH MỤC SẢN PHẨM"
                     android:textSize="25sp"
                     android:layout_weight="1"
@@ -302,68 +314,57 @@
                         android:gravity="center_horizontal"/>
                 </LinearLayout>
             </TableRow>
-        </TableLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SẢN PHẨM BÁN CHẠY"
-            android:textSize="25sp"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:textColor="#5D5C78"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_span="4"
-            android:layout_marginLeft="23dp"/>
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:scrollbars="horizontal">
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
+            <TableRow>
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <GridView
-                        android:id="@+id/gv_HotProduct"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_span="4"
-                        android:layout_weight="1"
-                        android:columnWidth="150dp"
-                        android:horizontalSpacing="5dp"
-                        android:numColumns="10"
-                        android:scrollbarAlwaysDrawHorizontalTrack="true"
-                        android:scrollbarAlwaysDrawVerticalTrack="true"
-                        android:scrollbars="horizontal"
-                        android:stretchMode="none"
-                        android:verticalSpacing="5dp"
-                        android:nestedScrollingEnabled="true"/>
-                </LinearLayout>
-            </FrameLayout>
-        </HorizontalScrollView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GỢI Ý SẢN PHẨM"
-            android:textSize="25sp"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:textColor="#5D5C78"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_span="4"
-            android:layout_marginLeft="23dp"/>
-        <GridView
-            android:id="@+id/gv_SuggestProduct"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="2"
-            android:gravity="center"
-            android:verticalSpacing="5dp"
-            android:horizontalSpacing="5dp"
-            android:nestedScrollingEnabled="true" />
+                    android:layout_height="match_parent"
+                    android:text="SẢN PHẨM BÁN CHẠY"
+                    android:textSize="25sp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textColor="#5D5C78"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_span="4"
+                    android:layout_marginLeft="23dp"/>
+            </TableRow>
+            <TableRow>
+                <GridView
+                    android:id="@+id/gv_HotProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"
+                    android:layout_span="4"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="GỢI Ý SẢN PHẨM"
+                    android:textSize="25sp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textColor="#5D5C78"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_span="4"
+                    android:layout_marginLeft="23dp"/>
+            </TableRow>
+            <TableRow>
+                <GridView
+                    android:id="@+id/gv_SuggestProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:layout_weight="1"
+                    android:numColumns="2"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"/>
+            </TableRow>
+        </TableLayout>
     </LinearLayout>
 </ScrollView>

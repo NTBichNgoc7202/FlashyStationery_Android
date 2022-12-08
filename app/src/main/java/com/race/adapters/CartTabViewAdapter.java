@@ -2,17 +2,19 @@ package com.race.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.race.fragment.CartFullFragment;
-import com.race.fragment.CartRebuyFragment;
+import com.race.fragments.CartFullFragment;
+import com.race.fragments.CartRebuyFragment;
 
 public class CartTabViewAdapter extends FragmentStateAdapter {
-
-    public CartTabViewAdapter(@NonNull FragmentActivity fragmentActivity) {
-        super(fragmentActivity);
+    public CartTabViewAdapter(@NonNull Fragment fragment) {
+        super(fragment);
     }
+
+//    public CartTabViewAdapter(@NonNull FragmentActivity fragmentActivity) {
+//        super(fragmentActivity);
+//    }
 
     @NonNull
     @Override
@@ -22,9 +24,8 @@ public class CartTabViewAdapter extends FragmentStateAdapter {
                 return new CartFullFragment();
             case 1:
                 return  new CartRebuyFragment();
-            default:
-                return new CartFullFragment();
         }
+        return  new CartFullFragment();
     }
 
     @Override

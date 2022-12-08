@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 public class OTPVerification extends AppCompatActivity {
 
-    TextView sendOTP;
 
     private EditText edtOtp1, edtOtp2, edtOtp3, edtOtp4;
     private TextView txtResend;
@@ -82,27 +81,19 @@ public class OTPVerification extends AppCompatActivity {
                     startCounDownTimer();
                 }
             }
+
         });
 
         btnConfirmOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String generateOtp = edtOtp1.getText().toString() + edtOtp2.getText().toString() + edtOtp3.getText().toString() + edtOtp4.getText().toString();
+                final String generateOtp = edtOtp1.getText().toString()+edtOtp2.getText().toString()+edtOtp3.getText().toString()+edtOtp4.getText().toString();
 
                 if(generateOtp.length() == 4){
                     //handle your otp verification here
                 }
             }
         });
-
-        sendOTP = findViewById(R.id.txt_SendOTP);
-        sendOTP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(OTPVerification.this, "Mã xác nhận đã được gửi, hãy nhập lại mã", Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
     }
     private  void showKeyboard(EditText edtOtp){
@@ -119,7 +110,6 @@ public class OTPVerification extends AppCompatActivity {
             public void onTick(long l) {
 
                 txtResend.setText("Gửi lại mã xác nhận("+ (l / 1000)+ ")");
-
             }
 
             @Override
@@ -134,14 +124,10 @@ public class OTPVerification extends AppCompatActivity {
    private final TextWatcher textWatcher = new TextWatcher() {
        @Override
        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
        }
-
        @Override
        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
        }
-
        @Override
        public void afterTextChanged(Editable editable) {
            if(editable.length()>0){
@@ -162,12 +148,8 @@ public class OTPVerification extends AppCompatActivity {
            }
        }
    };
-
-
-
-
+    @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
-
         if (keyCode == KeyEvent.KEYCODE_DEL){
             if(selectedETPosition == 3){
                 selectedETPosition = 2;
@@ -185,7 +167,6 @@ public class OTPVerification extends AppCompatActivity {
         }
         else {
             return super.onKeyUp(keyCode, event);
-
         }
     }
 }

@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.race.adapters.PhotoAdapter;
 import com.race.flashystationery.databinding.ActivityProductBinding;
+import com.race.models.Photos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,7 @@ public class ProductActivity extends AppCompatActivity {
     CircleIndicator ccIndicatior;
     PhotoAdapter photoAdapter;
     ActivityProductBinding binding;
+    ImageView photoProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class ProductActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_product);
         binding = ActivityProductBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        //photoProduct = findViewById(R.id.img_Photo);
 
         viewPager = binding.viewpager;
         ccIndicatior = binding.ccIndicator;
@@ -36,6 +41,29 @@ public class ProductActivity extends AppCompatActivity {
         ccIndicatior.animatePageSelected(2);
         ccIndicatior.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(ccIndicatior.getDataSetObserver());
+
+        addEvents();
+    }
+
+    private void addEvents() {
+        binding.txtAddCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        binding.txtChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        binding.txtBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private List<Photos> getListPhotos() {
