@@ -66,14 +66,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3 sản phẩm"
+                                android:text="2 sản phẩm"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Thành tiền: 240.000đ"
+                                android:text="Thành tiền: 152.000đ"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"
@@ -84,13 +84,16 @@
 
                 </LinearLayout>
                 <Button
-                    android:id="@+id/btn_DanhGia"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/image_shadow"
                     android:layout_gravity="end"
                     android:text="Đánh giá"
                     android:textColor="#5D5C78"/>
+
+
+
+
             </LinearLayout>
 
         </LinearLayout>
@@ -149,14 +152,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3 sản phẩm"
+                                android:text="2 sản phẩm"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Thành tiền: 240.000đ"
+                                android:text="Thành tiền: 152.000đ"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"
@@ -167,7 +170,6 @@
 
                 </LinearLayout>
                 <Button
-                    android:id="@+id/btn_DaNhanDuocHang"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/image_shadow"
@@ -236,14 +238,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3 sản phẩm"
+                                android:text="2 sản phẩm"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Thành tiền: 240.000đ"
+                                android:text="Thành tiền: 152.000đ"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"
@@ -254,7 +256,6 @@
 
                 </LinearLayout>
                 <Button
-                    android:id="@+id/btn_XemChiTiet1"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/image_shadow"
@@ -323,14 +324,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3 sản phẩm"
+                                android:text="2 sản phẩm"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Thành tiền: 240.000đ"
+                                android:text="Thành tiền: 152.000đ"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#5D5C78"
                                 android:textSize="10sp"
@@ -341,7 +342,6 @@
 
                 </LinearLayout>
                 <Button
-                    android:id="@+id/btn_XemChiTiet2"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/image_shadow"
