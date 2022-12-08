@@ -1,9 +1,11 @@
 package com.race.flashystationery;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.race.flashystationery.databinding.ActivityOrderPaymentBinding;
@@ -45,5 +47,22 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        binding.btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

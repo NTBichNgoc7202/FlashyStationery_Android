@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
-import com.race.flashystationery.Banner;
+import com.race.models.Banner;
 import com.race.flashystationery.R;
 import com.race.fragments.HomeFragment;
 
