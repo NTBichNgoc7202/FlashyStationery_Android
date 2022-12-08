@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class SettingLanguage extends AppCompatActivity {
+public class AnnouncementActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting_language);
-        getSupportActionBar().setTitle("Cài đặt ngôn ngữ");
+        setContentView(R.layout.activity_announcement);
+
+        getSupportActionBar().setTitle("Thông báo tin mới");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
