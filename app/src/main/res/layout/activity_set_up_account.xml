@@ -26,24 +26,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E3CDCA">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imv_avt_User"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                <ImageView
+                    android:id="@+id/imv_bg"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/flashy_logo"
+                    android:layout_gravity="center"
                     android:layout_centerInParent="true"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/image_shadow"
-                    android:src="@drawable/ic_user" />
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imv_avt_User"
-                    android:text="Thay dổi ảnh đại điện"
+                    android:layout_below="@+id/imv_bg"
+                    android:layout_marginTop="6dp"
                     android:gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:textStyle="bold"/>
+                    android:text="Thiết lập tài khoản"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"

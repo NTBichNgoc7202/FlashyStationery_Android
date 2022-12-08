@@ -20,6 +20,34 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".PolicyListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MessageSupport"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CustomerSupport"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EmailSupportActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+                <activity
             android:name=".SaleProductActivity"
             android:exported="false">
             <meta-data
@@ -236,5 +264,6 @@
                 android:value="" />
         </activity>
     </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>

@@ -244,8 +244,9 @@
                 android:src="@drawable/user" />
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:layout_marginLeft="10dp"
                 android:hint="Để lại bình luận của bạn..." />
 
@@ -253,6 +254,7 @@
                 android:id="@+id/btn_sendcmt1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:layout_margin="5dp"
                 android:background="@drawable/round_button_3"
                 android:text="Gửi"
@@ -434,8 +436,9 @@
                 android:src="@drawable/user" />
 
             <EditText
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="5"
                 android:layout_marginLeft="10dp"
                 android:hint="Để lại bình luận của bạn..." />
             <Button
@@ -443,6 +446,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:textColor="#ffffff"
                 android:background="@drawable/round_button_3"
                 android:text="Gửi"/>

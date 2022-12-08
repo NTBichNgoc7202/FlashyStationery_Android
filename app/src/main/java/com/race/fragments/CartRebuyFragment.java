@@ -15,10 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.race.adapters.ItemNoteBookAdapter;
 import com.race.adapters.RebuyItemAdapter;
 import com.race.flashystationery.AddressListActivity;
 import com.race.flashystationery.R;
 import com.race.flashystationery.databinding.FragmentCartRebuyBinding;
+import com.race.models.ItemNoteBook;
 import com.race.models.RebuyItem;
 
 import java.util.ArrayList;
@@ -28,6 +30,9 @@ public class CartRebuyFragment extends Fragment {
     FragmentCartRebuyBinding binding;
     ArrayList<RebuyItem> rebuyItems;
     RebuyItemAdapter rebuyAdapter;
+
+    ItemNoteBookAdapter itemNoteBookAdapter;
+    ArrayList<ItemNoteBook> itemNoteBookArrayList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,6 +44,7 @@ public class CartRebuyFragment extends Fragment {
         binding = FragmentCartRebuyBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
         loadRebuyData();
+
         return view;
     }
     private void loadRebuyData() {
@@ -48,6 +54,7 @@ public class CartRebuyFragment extends Fragment {
 
         rebuyAdapter = new RebuyItemAdapter(CartRebuyFragment.this, R.layout.rebuy_item_list, rebuyItems);
         binding.lvRebuyItem.setAdapter(rebuyAdapter);
+        binding.lvRebuyItem.setExpanded(true);
     }
     public void plusItem(RebuyItem item) {
         int number = Integer.parseInt(item.getReNumber().toString()) + 1;
@@ -63,7 +70,48 @@ public class CartRebuyFragment extends Fragment {
     }
     public void onResume() {
         showEmptyView();
+        loadSuggestProduct();
         super.onResume();
+    }
+
+    private void loadSuggestProduct() {
+        itemNoteBookArrayList = new ArrayList<>();
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.planneritem,
+                "Sổ kế hoạch lò xo kép Study Planner B5 160 trang",
+                75000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.socongbianhua,
+                "Sổ Binder File Caro còng sắt B5 26 chấu 80 tờ",
+                78000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.notebook1,
+                "Sổ lò xo kép Caro 200 trang B5 giấy dày chống lem",
+                45000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.soloxodona4,
+                "Sổ lò xo đơn Caro (6x6)mm 200 trang A4",
+                48000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.soloxodona4300tr,
+                "Sổ lò xo đơn Caro (6x6)mm 300 trang A4",
+                69000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.soloxokepdot200tr,
+                "Sổ lò xo kép Dot Grid B5 200 trang",
+                51000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.soloxodot,
+                "Sổ lò xo kép Dot Grid B5 200 trang",
+                49000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.sovecaocap40to,
+                "Sổ vẽ lò xo đa năng Creative Art A5 40 tờ",
+                50000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.ruotsocongdot100to,
+                "Ruột sổ còng Dot Grid B5 120/76 - 100 tờ",
+                34000.0));
+        itemNoteBookArrayList.add(new ItemNoteBook(R.drawable.ruotsocongcaro100to,
+                "Ruột sổ còng Caro B5 120/76 - 100 tờ",
+                34000.0));
+        //bannerAdapter = new BannerAdapter(HomeFragment.this, getListBanners());
+
+        itemNoteBookAdapter = new ItemNoteBookAdapter(getActivity(),
+                R.layout.notebook_item_list, itemNoteBookArrayList);
+        binding.gvCartRebuySuggestProduct.setAdapter(itemNoteBookAdapter);
+        binding.gvCartRebuySuggestProduct.setExpanded(true);
     }
 
     private void showEmptyView() {
