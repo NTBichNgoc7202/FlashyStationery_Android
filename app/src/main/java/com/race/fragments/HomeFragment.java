@@ -21,6 +21,7 @@ import android.widget.SearchView;
 import com.race.adapters.BannerAdapter;
 import com.race.adapters.HotProductAdapter;
 import com.race.adapters.ItemNoteBookAdapter;
+import com.race.flashystationery.SearchActivity;
 import com.race.models.Banner;
 import com.race.flashystationery.NoteBookActivity;
 import com.race.flashystationery.NotificationActivity;
@@ -193,6 +194,7 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), ProductActivity.class));
             }
         });
+
     }
 
 
@@ -205,7 +207,17 @@ public class HomeFragment extends Fragment {
         searchView.setQueryHint("Bạn muốn tìm gì?");
         searchView.setIconifiedByDefault(false);
         searchView.setBackgroundResource(R.drawable.round_border_finding);
-
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//                return false;
+//            }
+//        });
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -213,6 +225,16 @@ public class HomeFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.app_Bar_Notify)
             startActivity(new Intent(getActivity(), NotificationActivity.class));
+        else if (item.getItemId() == R.id.app_Bar_Search) {
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+                    startActivity(new Intent(getActivity(), SearchActivity.class));
+                    return true;
+                }
+            });
+        }
         return super.onOptionsItemSelected(item);
     }
+
 }
