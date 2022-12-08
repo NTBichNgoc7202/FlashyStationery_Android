@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity"
+    android:orientation="vertical">
+    <SearchView
+        android:id="@+id/edt_Search"
+        android:layout_margin="10dp"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_border_finding"
+        android:drawableStart="@drawable/finding_icon"
+        android:padding="10dp"
+        android:hint="Tìm kiếm trong cuộc trò chuyện"
+        android:layout_gravity="center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_Tam"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_T"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ĐỖ MINH TÂM"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 AM"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Có áp dụng cùng lúc với khuyến mãi khác ko shop ơi?"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Ngoc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_N"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="N"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BÍCH NGỌC"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="19:30 PM"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cái này bớt 10.000 được hông shop?"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Phuc"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_P"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PHÚC HOÀI TÔ"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11/11/2022"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Có freeship hông shop?"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Trinh"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_Trinh"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NGỌC TRINH VÕ"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10/11/2022"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sổ này giấy cứng hay mỏng vậy ạ?"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Khoa"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_K"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="K"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KHOA TRƯƠNG"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="9/11/2022"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bán mắc quá ai mà mua chời!"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_My"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/image_shadow_4"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/imv_M"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/image_round_grey"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:gravity="center"
+                    android:textColor="#5D5C78"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MY LÊ THỊ TRÀ"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10/10/2022"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#5D5C78"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sản phẩm mình mua bị lỗi thì đổi trả như nào vậy ạ? Mình mới sử dụng được 2h thôi"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/image_shadow_5"
+                        android:textColor="#5D5C78"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
